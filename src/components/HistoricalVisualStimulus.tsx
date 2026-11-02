@@ -19,6 +19,12 @@ export const HistoricalVisualStimulus: React.FC<HistoricalVisualStimulusProps> =
   const [isZoomed, setIsZoomed] = useState<boolean>(false);
   const [imageFailed, setImageFailed] = useState<boolean>(false);
 
+  const resolvedImageUrl = imageUrl
+    ? (imageUrl.startsWith('http') || imageUrl.startsWith('data:')
+        ? imageUrl
+        : `${import.meta.env.BASE_URL}${imageUrl.replace(/^\//, '')}`)
+    : undefined;
+
   return (
     <div className="w-full my-6 rounded-2xl overflow-hidden border-2 border-stone-300 dark:border-stone-700 bg-stone-900 shadow-md">
       {/* Visual Header */}
@@ -43,10 +49,10 @@ export const HistoricalVisualStimulus: React.FC<HistoricalVisualStimulusProps> =
       <div className={`p-4 sm:p-6 flex items-center justify-center bg-stone-900/90 transition-all ${
         isZoomed ? 'min-h-[500px]' : 'min-h-[300px]'
       }`}>
-        {imageUrl && !imageFailed ? (
+        {resolvedImageUrl && !imageFailed ? (
           <div className="w-full flex items-center justify-center p-2 overflow-auto">
             <img
-              src={imageUrl}
+              src={resolvedImageUrl}
               alt={imageAlt || title}
               className={`w-auto h-auto max-h-[550px] object-contain rounded-xl shadow-2xl border-2 border-stone-700 transition-all duration-300 select-none ${
                 isZoomed ? 'scale-110 sm:scale-125 my-8 shadow-amber-500/10' : 'scale-100'

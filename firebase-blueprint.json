@@ -1,0 +1,66 @@
+{
+  "entities": {
+    "Submission": {
+      "title": "Student Submission",
+      "description": "Represents an adaptive diagnostic attempt submitted by a student.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the submission."
+        },
+        "studentName": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "Name entered by the student."
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "ISO date-time string when the submission was recorded."
+        },
+        "score": {
+          "type": "number",
+          "description": "Final score earned in the arcade quiz."
+        },
+        "questionsAnswered": {
+          "type": "number",
+          "description": "Total number of questions answered."
+        },
+        "questionsMastered": {
+          "type": "number",
+          "description": "Number of questions correctly answered."
+        },
+        "readinessIndex": {
+          "type": "number",
+          "description": "Calculated course readiness percentage (0-100)."
+        },
+        "lexileEstimate": {
+          "type": "string",
+          "description": "Estimated Lexile reading comprehension bracket."
+        },
+        "report": {
+          "type": "object",
+          "description": "Complete diagnostic report payload with unit mastery and reading profile."
+        },
+        "supportsUsed": {
+          "type": "number",
+          "description": "Count of tactical shields and primary source hints used."
+        }
+      },
+      "required": [
+        "studentName",
+        "timestamp",
+        "score",
+        "questionsAnswered",
+        "questionsMastered",
+        "readinessIndex"
+      ]
+    }
+  },
+  "firestore": {
+    "/submissions/{submissionId}": {
+      "schema": "Submission",
+      "description": "Collection of student diagnostic submissions viewable by the teacher dashboard."
+    }
+  }
+}

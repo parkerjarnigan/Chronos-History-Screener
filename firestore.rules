@@ -1,0 +1,36 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function isValidSubmission(data) {
+      return data.keys().hasAll(['studentName', 'timestamp', 'score', 'questionsAnswered', 'questionsMastered', 'readinessIndex'])
+        && data.studentName is string && data.studentName.size() > 0 && data.studentName.size() <= 100
+        && data.timestamp is string && data.timestamp.size() <= 64
+        && data.score is number && data.score >= 0
+        && data.questionsAnswered is number && data.questionsAnswered >= 0
+        && data.questionsMastered is number && data.questionsMastered >= 0
+        && data.readinessIndex is number && data.readinessIndex >= 0 && data.readinessIndex <= 100;
+    }
+
+    // Default-deny safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Student submissions collection
+    match /submissions/{submissionId} {
+      allow get, list: if true;
+      allow create: if isValidId(submissionId) && isValidSubmission(incoming());
+      allow update: if false;
+      allow delete: if isValidId(submissionId);
+    }
+  }
+}
