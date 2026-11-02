@@ -1,0 +1,6 @@
+{
+  "name": "Chronos Arcade: 10th Grade World History Adaptive Screener",
+  "description": "An adaptive review game and diagnostic assessment for 10th-grade World History evaluating content knowledge, reading comprehension, and IEP school readiness across four core units.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
