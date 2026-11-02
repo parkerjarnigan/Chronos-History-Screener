@@ -29,32 +29,24 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          # cache: 'npm'
-          # cache-dependency-path: ./Chronos-History-Screener/package-lock.json
 
-      # Explicitly entering the folder just for the install step
+      # Standard root installation
       - name: Install dependencies
-        run: |
-          cd Chronos-History-Screener
-          npm install
+        run: npm install
 
-      # Explicitly entering the folder just for the build step
+      # Standard root build
       - name: Build application
-        run: |
-          cd Chronos-History-Screener
-          npm run build
+        run: npm run build
 
-      # Setup Pages infrastructure
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      # Target the specific built output directory precisely 
+      # Target the default standard dist folder
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './Chronos-History-Screener/dist'
+          path: './dist'
 
-      # Deploy everything live
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
