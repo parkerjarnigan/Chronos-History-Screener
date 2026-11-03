@@ -72,7 +72,7 @@ export const StudentVictoryModal: React.FC<StudentVictoryModalProps> = ({
         </h1>
 
         <p className="text-stone-600 dark:text-stone-300 text-lg sm:text-xl max-w-xl mx-auto mt-3 leading-relaxed">
-          Great job, <span className="font-bold text-stone-900 dark:text-stone-100">{report.studentName}</span>! You explored 4 centuries of world history from Absolutism & Enlightenment through World War II.
+          Great job, <span className="font-bold text-stone-900 dark:text-stone-100">{report.studentName}</span>! {(report.assessedUnits?.length || 4) >= 4 ? 'You explored 4 centuries of world history across all four epochs from Absolutism through World War II.' : `You successfully completed your targeted diagnostic mission across ${report.assessedUnits?.length || 1} historical ${(report.assessedUnits?.length || 1) === 1 ? 'epoch' : 'epochs'}.`}
         </p>
       </div>
 

@@ -205,10 +205,11 @@ ${report.iepRecommendations.map(rec => `• [${rec.category} - ${rec.priority}] 
     });
   };
 
-  const getStatusColor = (status: 'Mastered' | 'Developing' | 'Needs Review') => {
+  const getStatusColor = (status: 'Mastered' | 'Developing' | 'Needs Review' | 'Not Assessed') => {
     if (status === 'Mastered') return 'text-emerald-800 bg-emerald-100 border-emerald-300 dark:bg-emerald-950/80 dark:text-emerald-300 dark:border-emerald-700';
     if (status === 'Developing') return 'text-amber-800 bg-amber-100 border-amber-300 dark:bg-amber-950/80 dark:text-amber-300 dark:border-amber-700';
-    return 'text-rose-800 bg-rose-100 border-rose-300 dark:bg-rose-950/80 dark:text-rose-300 dark:border-rose-700';
+    if (status === 'Needs Review') return 'text-rose-800 bg-rose-100 border-rose-300 dark:bg-rose-950/80 dark:text-rose-300 dark:border-rose-700';
+    return 'text-stone-600 bg-stone-100 border-stone-300 dark:bg-stone-800 dark:text-stone-400 dark:border-stone-700';
   };
 
   // Filter submissions by student name or date
@@ -718,54 +719,62 @@ ${report.iepRecommendations.map(rec => `• [${rec.category} - ${rec.priority}] 
                     </span>
                   </div>
 
-                  {/* Progress Bar */}
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-sm sm:text-base font-bold font-mono">
-                      <span>Mastery Score</span>
-                      <span>{u.correct} of {u.attempted} ({u.percentage}%)</span>
+                  {u.status === 'Not Assessed' || u.attempted === 0 ? (
+                    <div className="p-4 rounded-2xl bg-stone-50 dark:bg-stone-800/60 border border-dashed border-stone-300 dark:border-stone-700 text-stone-500 dark:text-stone-400 text-sm italic">
+                      This epoch was not included in this student's targeted diagnostic session (e.g. transfer student catch-up on selected units).
                     </div>
-                    <div className="w-full h-3.5 bg-stone-100 dark:bg-stone-800 rounded-full overflow-hidden border border-stone-200 dark:border-stone-700">
-                      <div 
-                        className={`h-full transition-all duration-500 ${
-                          u.percentage >= 75 ? 'bg-emerald-500' : u.percentage >= 50 ? 'bg-amber-500' : 'bg-rose-500'
-                        }`}
-                        style={{ width: `${u.percentage}%` }}
-                      />
-                    </div>
-                  </div>
+                  ) : (
+                    <>
+                      {/* Progress Bar */}
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm sm:text-base font-bold font-mono">
+                          <span>Mastery Score</span>
+                          <span>{u.correct} of {u.attempted} ({u.percentage}%)</span>
+                        </div>
+                        <div className="w-full h-3.5 bg-stone-100 dark:bg-stone-800 rounded-full overflow-hidden border border-stone-200 dark:border-stone-700">
+                          <div 
+                            className={`h-full transition-all duration-500 ${
+                              u.percentage >= 75 ? 'bg-emerald-500' : u.percentage >= 50 ? 'bg-amber-500' : 'bg-rose-500'
+                            }`}
+                            style={{ width: `${u.percentage}%` }}
+                          />
+                        </div>
+                      </div>
 
-                  {/* Strengths & Gaps */}
-                  <div className="space-y-3 pt-2 text-sm sm:text-base border-t border-stone-100 dark:border-stone-800">
-                    <div>
-                      <strong className="text-emerald-700 dark:text-emerald-400 font-bold block mb-1">
-                        Demonstrated Concepts:
-                      </strong>
-                      {u.strengths.length > 0 ? (
-                        <ul className="list-disc list-inside space-y-1 text-stone-700 dark:text-stone-300">
-                          {u.strengths.map((str, idx) => (
-                            <li key={idx}>{str}</li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <span className="text-stone-400 italic">No mastered items in this diagnostic window</span>
-                      )}
-                    </div>
+                      {/* Strengths & Gaps */}
+                      <div className="space-y-3 pt-2 text-sm sm:text-base border-t border-stone-100 dark:border-stone-800">
+                        <div>
+                          <strong className="text-emerald-700 dark:text-emerald-400 font-bold block mb-1">
+                            Demonstrated Concepts:
+                          </strong>
+                          {u.strengths.length > 0 ? (
+                            <ul className="list-disc list-inside space-y-1 text-stone-700 dark:text-stone-300">
+                              {u.strengths.map((str, idx) => (
+                                <li key={idx}>{str}</li>
+                              ))}
+                            </ul>
+                          ) : (
+                            <span className="text-stone-400 italic">No mastered items in this diagnostic window</span>
+                          )}
+                        </div>
 
-                    <div>
-                      <strong className="text-rose-700 dark:text-rose-400 font-bold block mb-1">
-                        Priority Learning Targets:
-                      </strong>
-                      {u.gaps.length > 0 ? (
-                        <ul className="list-disc list-inside space-y-1 text-stone-700 dark:text-stone-300">
-                          {u.gaps.map((gap, idx) => (
-                            <li key={idx}>{gap}</li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <span className="text-emerald-600 italic">No persistent deficits detected</span>
-                      )}
-                    </div>
-                  </div>
+                        <div>
+                          <strong className="text-rose-700 dark:text-rose-400 font-bold block mb-1">
+                            Priority Learning Targets:
+                          </strong>
+                          {u.gaps.length > 0 ? (
+                            <ul className="list-disc list-inside space-y-1 text-stone-700 dark:text-stone-300">
+                              {u.gaps.map((gap, idx) => (
+                                <li key={idx}>{gap}</li>
+                              ))}
+                            </ul>
+                          ) : (
+                            <span className="text-emerald-600 italic">No persistent deficits detected</span>
+                          )}
+                        </div>
+                      </div>
+                    </>
+                  )}
                 </div>
               );
             })}

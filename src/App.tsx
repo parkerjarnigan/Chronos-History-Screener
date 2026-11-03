@@ -15,18 +15,20 @@ import {
   HelpCircle,
   Type
 } from 'lucide-react';
-import { Question, DiagnosticReport } from './types/history';
+import { Question, DiagnosticReport, UnitId } from './types/history';
 import { AdaptiveEngine } from './utils/adaptiveEngine';
 import { sounds } from './utils/soundEffects';
 import { ArcadeHeader } from './components/ArcadeHeader';
 import { ArcadeQuizCard } from './components/ArcadeQuizCard';
+import { EpochSelectionScreen } from './components/EpochSelectionScreen';
 import { StudentVictoryModal } from './components/StudentVictoryModal';
 import { TeacherDashboard } from './components/TeacherDashboard';
 import { getDemoReport } from './data/demoProfiles';
 
 export default function App() {
-  const [screen, setScreen] = useState<'welcome' | 'quiz' | 'victory' | 'teacher'>('welcome');
+  const [screen, setScreen] = useState<'welcome' | 'epoch-selection' | 'quiz' | 'victory' | 'teacher'>('welcome');
   const [studentName, setStudentName] = useState<string>('Alex');
+  const [selectedUnits, setSelectedUnits] = useState<UnitId[]>(['unit1', 'unit2', 'unit3', 'unit4']);
   const [engine, setEngine] = useState<AdaptiveEngine>(() => new AdaptiveEngine());
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
   const [score, setScore] = useState<number>(0);
@@ -36,10 +38,33 @@ export default function App() {
   const [fontSize, setFontSize] = useState<'normal' | 'large'>('normal');
   const [activeReport, setActiveReport] = useState<DiagnosticReport | null>(null);
 
+  const handleGoToEpochSelection = () => {
+    sounds.playClick();
+    setScreen('epoch-selection');
+  };
+
+  const handleToggleUnit = (unitId: UnitId) => {
+    setSelectedUnits(prev => {
+      if (prev.includes(unitId)) {
+        return prev.filter(u => u !== unitId);
+      } else {
+        return [...prev, unitId];
+      }
+    });
+  };
+
+  const handleSelectAllUnits = () => {
+    setSelectedUnits(['unit1', 'unit2', 'unit3', 'unit4']);
+  };
+
+  const handleClearAllUnits = () => {
+    setSelectedUnits([]);
+  };
+
   // Initialize first question on quiz start
   const handleStartGame = () => {
     sounds.playClick();
-    const newEngine = new AdaptiveEngine();
+    const newEngine = new AdaptiveEngine(selectedUnits);
     setEngine(newEngine);
     const q1 = newEngine.getNextQuestion();
     setCurrentQuestion(q1);
@@ -150,7 +175,7 @@ export default function App() {
       {/* Universal Top Bar */}
       <ArcadeHeader
         currentQuestionIndex={engine.getAskedCount()}
-        totalQuestionsTarget={12}
+        totalQuestionsTarget={engine.getTargetQuestionCount()}
         currentUnit={currentQuestion ? currentQuestion.unit : 'unit1'}
         currentTier={engine.getCurrentTier()}
         streak={streak}
@@ -236,14 +261,14 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Launch Game Button */}
+              {/* Proceed to Epoch Selection Button */}
               <div className="pt-3">
                 <button
-                  onClick={handleStartGame}
-                  className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-stone-950 hover:bg-stone-800 text-amber-400 hover:text-amber-300 font-black text-xl flex items-center justify-center gap-3 mx-auto shadow-xl transition-transform active:scale-95"
+                  onClick={handleGoToEpochSelection}
+                  className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-stone-950 hover:bg-stone-800 text-amber-400 hover:text-amber-300 font-black text-xl flex items-center justify-center gap-3 mx-auto shadow-xl transition-transform active:scale-95 cursor-pointer"
                 >
-                  <Play className="w-6 h-6 fill-amber-400" />
-                  <span>Start Time Jump (10–14 Questions)</span>
+                  <span>Next: Choose Epochs & Missions</span>
+                  <ArrowRight className="w-6 h-6 stroke-[3]" />
                 </button>
               </div>
 
@@ -253,7 +278,7 @@ export default function App() {
                 <span>Teacher evaluating the transfer student?</span>
                 <button
                   onClick={handleOpenTeacherPortal}
-                  className="font-bold text-stone-900 dark:text-stone-100 underline hover:text-amber-600"
+                  className="font-bold text-stone-900 dark:text-stone-100 underline hover:text-amber-600 cursor-pointer"
                 >
                   Open Teacher Evaluation Dashboard Directly
                 </button>
@@ -274,14 +299,29 @@ export default function App() {
         )}
 
         {/* ==================================================== */}
-        {/* SCREEN 2: ACTIVE ADAPTIVE QUIZ                       */}
+        {/* SCREEN 2: DEDICATED EPOCH SELECTION SCREEN           */}
+        {/* ==================================================== */}
+        {screen === 'epoch-selection' && (
+          <EpochSelectionScreen
+            studentName={studentName}
+            selectedUnits={selectedUnits}
+            onToggleUnit={handleToggleUnit}
+            onSelectAll={handleSelectAllUnits}
+            onClearAll={handleClearAllUnits}
+            onBackToWelcome={() => setScreen('welcome')}
+            onStartQuiz={handleStartGame}
+          />
+        )}
+
+        {/* ==================================================== */}
+        {/* SCREEN 3: ACTIVE ADAPTIVE QUIZ                       */}
         {/* ==================================================== */}
         {screen === 'quiz' && currentQuestion && (
           <div className="w-full my-auto animate-in fade-in duration-200">
             <ArcadeQuizCard
               question={currentQuestion}
               questionNumber={engine.getAskedCount() + 1}
-              totalQuestionsTarget={12}
+              totalQuestionsTarget={engine.getTargetQuestionCount()}
               lifelinesAvailable={lifelinesRemaining}
               streak={streak}
               score={score}

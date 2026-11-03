@@ -86,10 +86,11 @@ export interface DiagnosticReport {
     attempted: number;
     correct: number;
     percentage: number;
-    status: 'Mastered' | 'Developing' | 'Needs Review';
+    status: 'Mastered' | 'Developing' | 'Needs Review' | 'Not Assessed';
     strengths: string[];
     gaps: string[];
   }>;
+  assessedUnits?: UnitId[];
   readingProfile: {
     lowDemandPct: number;
     medDemandPct: number;

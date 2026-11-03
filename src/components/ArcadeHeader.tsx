@@ -67,21 +67,21 @@ export const ArcadeHeader: React.FC<ArcadeHeaderProps> = ({
           </button>
         </div>
 
-        {/* Zone 2: Navigation & Status Links (100% larger) */}
-        <div className="hidden lg:flex items-center gap-6 text-sm sm:text-base text-stone-300">
+        {/* Zone 2: Navigation & Status Links */}
+        <div className="flex items-center gap-3 sm:gap-6 text-sm sm:text-base text-stone-300">
           {/* Progress Indicator */}
-          <div className="flex items-center gap-2">
-            <span className="text-stone-400 font-mono">Question</span>
-            <span className="font-black text-amber-400 font-mono text-lg">
-              {currentQuestionIndex + 1}
+          <div className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 rounded-xl bg-stone-800/80 border border-stone-700/80 shadow-inner">
+            <span className="text-stone-400 font-mono text-xs sm:text-sm">Question</span>
+            <span className="font-black text-amber-400 font-mono text-base sm:text-lg">
+              {Math.min(currentQuestionIndex + 1, totalQuestionsTarget)}
             </span>
-            <span className="text-stone-500 font-mono">/ ~{totalQuestionsTarget}</span>
+            <span className="text-stone-400 font-mono text-xs sm:text-sm">/ {totalQuestionsTarget}</span>
           </div>
 
-          <span className="text-stone-700" aria-hidden="true">|</span>
+          <span className="hidden md:inline text-stone-700" aria-hidden="true">|</span>
 
           {/* Current Epoch */}
-          <div className="flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-2">
             <span className="text-stone-400">Epoch:</span>
             <span className="font-bold text-stone-100">{unitInfo.name}</span>
             <span className="text-stone-500 text-xs font-mono">({unitInfo.era})</span>

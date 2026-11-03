@@ -13,13 +13,30 @@ import { QUESTION_BANK } from '../data/questionBank';
 export class AdaptiveEngine {
   private history: StudentAnswerRecord[] = [];
   private currentTier: DifficultyTier = 1;
-  private currentUnitIndex: number = 0;
-  private readonly unitSequence: UnitId[] = ['unit1', 'unit2', 'unit3', 'unit4'];
+  private readonly selectedUnits: UnitId[];
+  private readonly targetQuestionCount: number;
   private askedQuestionIds: Set<string> = new Set();
 
-  constructor() {
+  constructor(selectedUnits: UnitId[] = ['unit1', 'unit2', 'unit3', 'unit4']) {
+    this.selectedUnits = selectedUnits && selectedUnits.length > 0 
+      ? selectedUnits 
+      : ['unit1', 'unit2', 'unit3', 'unit4'];
     this.currentTier = 1;
-    this.currentUnitIndex = 0;
+
+    // Proportional session length:
+    // 1 unit: 6 questions
+    // 2 units: 8 questions
+    // 3 units: 10 questions
+    // 4 units: 12 questions (up to 14 with calibration)
+    if (this.selectedUnits.length === 1) {
+      this.targetQuestionCount = 6;
+    } else if (this.selectedUnits.length === 2) {
+      this.targetQuestionCount = 8;
+    } else if (this.selectedUnits.length === 3) {
+      this.targetQuestionCount = 10;
+    } else {
+      this.targetQuestionCount = 12;
+    }
   }
 
   public getHistory(): StudentAnswerRecord[] {
@@ -34,13 +51,37 @@ export class AdaptiveEngine {
     return this.currentTier;
   }
 
+  public getTargetQuestionCount(): number {
+    return this.targetQuestionCount;
+  }
+
+  public getSelectedUnits(): UnitId[] {
+    return [...this.selectedUnits];
+  }
+
   public getTargetUnit(): UnitId {
-    const qCount = this.history.length;
-    if (qCount < 3) return 'unit1';
-    if (qCount < 6) return 'unit2';
-    if (qCount < 9) return 'unit3';
-    if (qCount < 12) return 'unit4';
-    // For questions 13-14 (Calibration / Validation): target the unit with lowest accuracy or highest ambiguity
+    // Count how many questions have been asked for each selected unit so far
+    const unitCounts: Record<UnitId, number> = {
+      unit1: 0,
+      unit2: 0,
+      unit3: 0,
+      unit4: 0,
+    };
+    this.history.forEach(rec => {
+      unitCounts[rec.unit] = (unitCounts[rec.unit] || 0) + 1;
+    });
+
+    // Baseline quota per selected unit
+    const basePerUnit = Math.floor(this.targetQuestionCount / this.selectedUnits.length);
+    
+    // Find the first selected unit that has not met its baseline quota
+    for (const unit of this.selectedUnits) {
+      if (unitCounts[unit] < basePerUnit) {
+        return unit;
+      }
+    }
+
+    // Once all have reached base quota, target the selected unit with lowest accuracy (calibration)
     return this.getCalibrationUnit();
   }
 
@@ -57,10 +98,10 @@ export class AdaptiveEngine {
       if (rec.isCorrect) unitScores[rec.unit].correct += 1;
     });
 
-    let lowestUnit: UnitId = 'unit1';
+    let lowestUnit: UnitId = this.selectedUnits[0];
     let lowestRatio = 1.1;
 
-    for (const unit of this.unitSequence) {
+    for (const unit of this.selectedUnits) {
       const stats = unitScores[unit];
       const ratio = stats.total > 0 ? stats.correct / stats.total : 0;
       if (ratio < lowestRatio) {
@@ -74,16 +115,10 @@ export class AdaptiveEngine {
 
   public getNextQuestion(): Question | null {
     const qCount = this.history.length;
-    if (qCount >= 14) return null; // maximum cap reached
+    // Hard ceiling
+    if (qCount >= Math.min(14, this.targetQuestionCount + 2)) return null;
 
-    // Check early termination at Q10-12 if diagnostic signal is exceptionally clear
-    if (qCount >= 12) {
-      const correctTotal = this.history.filter(h => h.isCorrect).length;
-      // If student is near 100% or near 0%, we already have definitive diagnostic certainty
-      if (correctTotal >= 11 || correctTotal <= 3) {
-        return null;
-      }
-    }
+    if (this.shouldFinish()) return null;
 
     const targetUnit = this.getTargetUnit();
     const available = QUESTION_BANK.filter(
@@ -91,10 +126,12 @@ export class AdaptiveEngine {
     );
 
     if (available.length === 0) {
-      // Fallback to any unasked question
-      const anyAvailable = QUESTION_BANK.filter(q => !this.askedQuestionIds.has(q.id));
-      if (anyAvailable.length === 0) return null;
-      return anyAvailable[0];
+      // Fallback to any unasked question within the SELECTED units
+      const anyAvailableInUnits = QUESTION_BANK.filter(
+        q => this.selectedUnits.includes(q.unit) && !this.askedQuestionIds.has(q.id)
+      );
+      if (anyAvailableInUnits.length === 0) return null;
+      return anyAvailableInUnits[0];
     }
 
     // Try to find a question at the current target tier
@@ -136,14 +173,12 @@ export class AdaptiveEngine {
 
     // Adaptive adjustment for next question:
     if (isCorrect) {
-      // Scale up if not already at maximum
       if (this.currentTier === 1) {
         this.currentTier = 2;
       } else if (this.currentTier === 2) {
         this.currentTier = 3;
       }
     } else {
-      // Scale down or hold at foundational
       if (this.currentTier === 3) {
         this.currentTier = 2;
       } else if (this.currentTier === 2) {
@@ -156,16 +191,18 @@ export class AdaptiveEngine {
 
   public shouldFinish(): boolean {
     const count = this.history.length;
-    if (count >= 14) return true;
-    if (count >= 10) {
-      // Check if we have touched all 4 units
-      const unitsTested = new Set(this.history.map(h => h.unit));
-      if (unitsTested.size === 4 && count >= 12) {
-        return true;
-      }
-      // If extreme high or low score by 10 questions
-      const correct = this.history.filter(h => h.isCorrect).length;
-      if (count === 10 && (correct >= 9 || correct <= 2)) {
+    // If we've reached max cap beyond target
+    if (count >= this.targetQuestionCount + 2) return true;
+    
+    // If target question count is reached
+    if (count >= this.targetQuestionCount) {
+      // Ensure all selected units have received at least 1 question
+      const unitCounts: Record<string, number> = {};
+      this.history.forEach(h => {
+        unitCounts[h.unit] = (unitCounts[h.unit] || 0) + 1;
+      });
+      const allSelectedTouched = this.selectedUnits.every(u => (unitCounts[u] || 0) >= 1);
+      if (allSelectedTouched) {
         return true;
       }
     }
@@ -202,12 +239,17 @@ export class AdaptiveEngine {
       }
     });
 
-    for (const key of this.unitSequence) {
+    for (const key of ['unit1', 'unit2', 'unit3', 'unit4'] as UnitId[]) {
       const u = contentMastery[key];
-      u.percentage = u.attempted > 0 ? Math.round((u.correct / u.attempted) * 100) : 0;
-      if (u.percentage >= 70) u.status = 'Mastered';
-      else if (u.percentage >= 40) u.status = 'Developing';
-      else u.status = 'Needs Review';
+      if (!this.selectedUnits.includes(key)) {
+        u.status = 'Not Assessed';
+        u.percentage = 0;
+      } else {
+        u.percentage = u.attempted > 0 ? Math.round((u.correct / u.attempted) * 100) : 0;
+        if (u.percentage >= 70) u.status = 'Mastered';
+        else if (u.percentage >= 40) u.status = 'Developing';
+        else u.status = 'Needs Review';
+      }
     }
 
     // 2. Reading Profile & Lexile Resilience
@@ -422,6 +464,7 @@ export class AdaptiveEngine {
       overallReadinessScore,
       readinessLevel,
       contentMastery,
+      assessedUnits: [...this.selectedUnits],
       readingProfile: {
         lowDemandPct: lowPct,
         medDemandPct: medPct,
