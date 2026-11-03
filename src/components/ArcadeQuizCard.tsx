@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { 
   Shield, 
   HelpCircle, 
@@ -53,6 +53,16 @@ export const ArcadeQuizCard: React.FC<ArcadeQuizCardProps> = ({
   const [elapsedSeconds, setElapsedSeconds] = useState<number>(0);
   const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
 
+  // Randomize answer options position (A,B,C,D) for each question
+  const displayOptions = useMemo(() => {
+    const opts = [...question.options];
+    for (let i = opts.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [opts[i], opts[j]] = [opts[j], opts[i]];
+    }
+    return opts;
+  }, [question.id]);
+  
   // Reset state when new question loads
   useEffect(() => {
     setSelectedOptionId(null);
@@ -284,7 +294,7 @@ export const ArcadeQuizCard: React.FC<ArcadeQuizCardProps> = ({
 
         {/* Answer Options Grid (100% larger text and generous touch padding) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-7">
-          {question.options.map((option, idx) => {
+          {displayOptions.map((option, idx) => {
             const letter = String.fromCharCode(65 + idx); // A, B, C, D
             const isEliminated = eliminatedIds.includes(option.id);
             const isSelected = selectedOptionId === option.id;
