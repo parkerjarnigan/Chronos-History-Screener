@@ -1,9 +1,11 @@
 import { Question } from '../types/history';
 
 export const QUESTION_BANK: Question[] = [
-  // ==========================================
-  // UNIT 1: ABSOLUTISM, ENLIGHTENMENT & REVOLUTIONS
-  // ==========================================
+  // ==========================================================================
+  // UNIT 1: ABSOLUTISM, ENLIGHTENMENT & REVOLUTIONS (15 Questions)
+  // ==========================================================================
+
+  // --- Tier 1 (Recall & Core Vocabulary) ---
   {
     id: 'u1-t1-divine-right',
     unit: 'unit1',
@@ -11,16 +13,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 1,
     skill: 'recall',
     readingDemand: 'low',
-    questionText: 'European absolutist monarchs (such as King Louis XIV) believed they received their supreme power to rule from:',
+    questionText: 'Under the political doctrine of absolute monarchy, rulers such as France\'s Louis XIV claimed their governing sovereignty was granted directly by:',
     options: [
       { id: 'a', text: 'God (Divine Right of Kings)' },
-      { id: 'b', text: 'The votes of ordinary citizens' },
-      { id: 'c', text: 'A council of elected judges' },
-      { id: 'd', text: 'Wealthy merchant guild leaders' },
+      { id: 'b', text: 'The collective ballot of working citizens' },
+      { id: 'c', text: 'An independent tribunal of elected magistrates' },
+      { id: 'd', text: 'Commercial charters issued by merchant guilds' },
     ],
     correctOptionId: 'a',
-    hint: 'Think about the term "Divine Right"—who does the word divine connect to?',
-    explanation: 'Absolute monarchs justified their unlimited authority using the doctrine of "Divine Right," claiming that God alone placed them on the throne and they were accountable only to God.',
+    hint: 'Reflect on the theological roots of "Divine Right"—who did absolute sovereigns claim as their sole judge?',
+    explanation: 'Absolute monarchs legitimized their unchecked authority through the Divine Right of Kings, maintaining that royal power originated from God alone and could not be limited by human institutions.',
     foundationalConcept: 'Divine Right of Kings'
   },
   {
@@ -30,16 +32,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 1,
     skill: 'recall',
     readingDemand: 'low',
-    questionText: 'King Louis XIV of France centralized his royal power and kept France’s wealthy nobles under close observation at his grand palace of:',
+    questionText: 'To neutralize potential aristocratic rebellions and consolidate national administration under his direct eye, King Louis XIV required French nobility to reside at:',
     options: [
-      { id: 'a', text: 'Versailles' },
-      { id: 'b', text: 'Buckingham' },
-      { id: 'c', text: 'The Bastille' },
-      { id: 'd', text: 'St. Petersburg' },
+      { id: 'a', text: 'The Palace of Versailles' },
+      { id: 'b', text: 'Buckingham Palace' },
+      { id: 'c', text: 'The Bastille Fortress' },
+      { id: 'd', text: 'The Winter Palace of St. Petersburg' },
     ],
     correctOptionId: 'a',
-    hint: 'It is a world-famous gilded palace located just outside Paris, famous for its Hall of Mirrors.',
-    explanation: 'Louis XIV constructed the Palace of Versailles to serve as the seat of government and forced high-ranking nobles to live there, reducing their ability to rebel against his authority.',
+    hint: 'This gilded royal residence southwest of Paris was celebrated for its grand gardens and Hall of Mirrors.',
+    explanation: 'Louis XIV constructed Versailles to centralize royal governance and domesticate high-ranking nobles with elaborate court rituals, neutralizing their capacity to challenge royal edicts.',
     foundationalConcept: 'Louis XIV & Royal Centralization'
   },
   {
@@ -49,18 +51,58 @@ export const QUESTION_BANK: Question[] = [
     tier: 1,
     skill: 'chronology',
     readingDemand: 'low',
-    questionText: 'Which event in July 1789 is traditionally recognized by historians as the official start of the French Revolution?',
+    questionText: 'In July 1789, Parisian insurgents confronted royal authority and secured munitions in a pivotal insurrection widely regarded as the flashpoint of the French Revolution at:',
     options: [
-      { id: 'a', text: 'The Storming of the Bastille prison' },
-      { id: 'b', text: 'The crowning of Napoleon as Emperor' },
-      { id: 'c', text: 'The signing of the Magna Carta' },
-      { id: 'd', text: 'The defeat at the Battle of Waterloo' },
+      { id: 'a', text: 'The Storming of the Bastille prison-armory' },
+      { id: 'b', text: 'The imperial coronation of Napoleon Bonaparte' },
+      { id: 'c', text: 'The parliamentary ratification of Magna Carta' },
+      { id: 'd', text: 'The military engagement at Waterloo' },
     ],
     correctOptionId: 'a',
-    hint: 'Angry Paris citizens raided an old medieval fortress and armory to seize gunpowder and weapons.',
-    explanation: 'On July 14, 1789, Parisian commoners stormed the Bastille, a symbol of royal tyranny and an armory holding gunpowder. Bastille Day remains France’s national holiday.',
+    hint: 'Crowds targeted an imposing medieval state fortress to seize gunpowder and challenge royal absolutism.',
+    explanation: 'On July 14, 1789, commoners attacked the Bastille, a medieval fortress representing feudal tyranny. Its fall signaled the popular phase of the French Revolution.',
     foundationalConcept: 'Start of the French Revolution'
   },
+  {
+    id: 'u1-t1-wollstonecraft',
+    unit: 'unit1',
+    unitName: 'Unit 1: Absolutism & Revolutions',
+    tier: 1,
+    skill: 'recall',
+    readingDemand: 'low',
+    questionText: 'Which Enlightenment philosopher published "A Vindication of the Rights of Woman" (1792), asserting that women are rational beings deserving equal educational opportunities?',
+    options: [
+      { id: 'a', text: 'Mary Wollstonecraft' },
+      { id: 'b', text: 'Queen Marie Antoinette' },
+      { id: 'c', text: 'Tsarina Catherine the Great' },
+      { id: 'd', text: 'Olympe de Gouges' },
+    ],
+    correctOptionId: 'a',
+    hint: 'She argued that apparent intellectual differences between men and women were the consequence of deficient schooling rather than natural capacity.',
+    explanation: 'Mary Wollstonecraft was a foundational Enlightenment thinker who argued that women possessed reason equal to men and that denying them formal education harmed civic society.',
+    foundationalConcept: 'Enlightenment & Women\'s Rights'
+  },
+  {
+    id: 'u1-t1-reign-of-terror',
+    unit: 'unit1',
+    unitName: 'Unit 1: Absolutism & Revolutions',
+    tier: 1,
+    skill: 'vocabulary',
+    readingDemand: 'low',
+    questionText: 'During the radical stage of the French Revolution (1793–1794), the Committee of Public Safety employed state executions to suppress suspected internal counter-revolutionaries during the:',
+    options: [
+      { id: 'a', text: 'Reign of Terror' },
+      { id: 'b', text: 'Glorious Revolution' },
+      { id: 'c', text: 'Tennis Court Oath' },
+      { id: 'd', text: 'Congress of Vienna' },
+    ],
+    correctOptionId: 'a',
+    hint: 'Maximilien Robespierre directed this severe campaign that sent tens of thousands of citizens to the guillotine.',
+    explanation: 'The Reign of Terror was orchestrated by the Jacobins under Robespierre, employing mass executions via the guillotine to eliminate perceived enemies of the republic during wartime.',
+    foundationalConcept: 'Radical Phase: Reign of Terror'
+  },
+
+  // --- Tier 2 (Conceptual & Cause/Effect) ---
   {
     id: 'u1-t2-locke-rights',
     unit: 'unit1',
@@ -68,16 +110,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'cause_effect',
     readingDemand: 'medium',
-    questionText: 'According to Enlightenment philosopher John Locke, what was the primary obligation of a government toward its citizens?',
+    questionText: 'In his Two Treatises of Government, Enlightenment philosopher John Locke argued that political commonwealths are legitimate only when they fulfill their core duty to:',
     options: [
-      { id: 'a', text: 'To protect people’s natural rights: life, liberty, and property' },
-      { id: 'b', text: 'To enforce a single state religion across all citizens' },
-      { id: 'c', text: 'To maintain total control over all trade and industry' },
-      { id: 'd', text: 'To conquer neighboring foreign lands for farmland' },
+      { id: 'a', text: 'Safeguard citizens\' inalienable natural rights to life, liberty, and estate' },
+      { id: 'b', text: 'Impose uniform religious orthodoxy across all domestic territories' },
+      { id: 'c', text: 'Exercise total mercantilist regulation over all commercial manufacturing' },
+      { id: 'd', text: 'Annex overseas frontiers to expand royal agricultural holdings' },
     ],
     correctOptionId: 'a',
-    hint: 'Locke believed people were born free with rights that no king had the right to take away.',
-    explanation: 'John Locke argued that people enter into a social contract with government specifically to safeguard their natural rights (life, liberty, and property). If the government abuses those rights, the people have a right to replace it.',
+    hint: 'Locke posited that government functions as a conditional trust; if natural rights are breached, citizens possess a right of rebellion.',
+    explanation: 'Locke postulated that humans enter a social compact solely to protect inherent natural rights (life, liberty, property). Failure by monarchs to protect these rights justified changing the government.',
     foundationalConcept: 'Lockean Natural Rights & Social Contract'
   },
   {
@@ -87,16 +129,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'cause_effect',
     readingDemand: 'medium',
-    questionText: 'Baron de Montesquieu’s most influential contribution to modern democratic constitutions was his belief in:',
+    questionText: 'Which structural constitutional reform did Baron de Montesquieu advocate in "The Spirit of the Laws" to safeguard civic freedom against despotic tyranny?',
     options: [
-      { id: 'a', text: 'Separation of government powers into three branches with checks and balances' },
-      { id: 'b', text: 'A military dictatorship led by an experienced general' },
-      { id: 'c', text: 'Giving religious leaders total authority to write tax laws' },
-      { id: 'd', text: 'Abolishing all private property and land ownership' },
+      { id: 'a', text: 'Dividing state sovereignty into distinct legislative, executive, and judicial branches' },
+      { id: 'b', text: 'Establishing a martial regime led by an supreme commanding general' },
+      { id: 'c', text: 'Restricting lawmaking authority exclusively to clerical leaders' },
+      { id: 'd', text: 'Abolishing private property in favor of communal agricultural tracts' },
     ],
     correctOptionId: 'a',
-    hint: 'He wanted to prevent any single ruler from becoming a tyrant by dividing authority (executive, legislative, judicial).',
-    explanation: 'Montesquieu advocated for dividing government into executive, legislative, and judicial branches so that each could check and balance the others, preventing tyranny.',
+    hint: 'He proposed that power must counter power through a tripartite division of governance and checks and balances.',
+    explanation: 'Montesquieu argued that dispersing governmental power among three separate branches prevented despotic consolidation, an architecture adopted directly in the US Constitution.',
     foundationalConcept: 'Montesquieu & Separation of Powers'
   },
   {
@@ -106,16 +148,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'cause_effect',
     readingDemand: 'medium',
-    questionText: 'What was the major long-term constitutional outcome of the English Civil War and the English Bill of Rights (1689)?',
+    questionText: 'What fundamental constitutional transformation resulted from the English Civil War, the Glorious Revolution, and the passage of the English Bill of Rights (1689)?',
     options: [
-      { id: 'a', text: 'England became a limited constitutional monarchy where kings must share power with Parliament' },
-      { id: 'b', text: 'England established a permanent absolute monarchy with no legislature' },
-      { id: 'c', text: 'The English Catholic Church took total political control of the military' },
-      { id: 'd', text: 'England gave up all overseas colonies and abandoned trade' },
+      { id: 'a', text: 'The establishment of a limited constitutional monarchy where monarchs must govern in concert with Parliament' },
+      { id: 'b', text: 'The creation of an autocratic absolute monarchy free from legislative review' },
+      { id: 'c', text: 'The formal cession of all executive administration to the Roman Catholic Papacy' },
+      { id: 'd', text: 'The immediate dissolution of the British navy and merchant marine' },
     ],
     correctOptionId: 'a',
-    hint: 'The king was no longer all-powerful; he had to respect laws passed by elected lawmakers in Parliament.',
-    explanation: 'The English Civil War and subsequent Bill of Rights firmly established that English monarchs could not rule without Parliament’s consent or levy taxes without parliamentary approval.',
+    hint: 'The crown lost unilateral taxation and lawmaking privileges, solidifying the supremacy of representative statute.',
+    explanation: 'The 1689 English Bill of Rights ended royal attempts at absolutism in England, codifying that monarchs could not suspend laws or levy taxes without parliamentary approval.',
     foundationalConcept: 'Constitutional Monarchy & Parliament'
   },
   {
@@ -125,16 +167,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'vocabulary',
     readingDemand: 'medium',
-    questionText: 'Under the Old Regime in France, the Third Estate made up roughly 97% of the population. Why were they deeply resentful of the First and Second Estates?',
+    questionText: 'Why did the systemic structure of the Ancien Régime’s Three Estates generate deep structural anger among members of France\'s Third Estate?',
     options: [
-      { id: 'a', text: 'The Third Estate paid almost all the country’s taxes while the clergy and nobility paid none' },
-      { id: 'b', text: 'The Third Estate was required to live outside of French borders' },
-      { id: 'c', text: 'The Third Estate was forced to serve exclusively in the royal navy' },
-      { id: 'd', text: 'The First Estate controlled all the factories and steam engines' },
+      { id: 'a', text: 'The Third Estate comprised ~98% of the populace and shouldered heavy taxation while the nobility and clergy enjoyed tax exemptions' },
+      { id: 'b', text: 'The Third Estate was legally barred from engaging in urban trade or rural farming' },
+      { id: 'c', text: 'Only individuals from the Third Estate were permitted to attend university or write books' },
+      { id: 'd', text: 'Members of the Third Estate were forced to leave France during winter months' },
     ],
     correctOptionId: 'a',
-    hint: 'Think about who carried the financial burden of the entire country while enjoying almost zero political privilege.',
-    explanation: 'The Third Estate (peasants, workers, and bourgeoisie) bore nearly the entire tax burden of France, while the First Estate (Clergy) and Second Estate (Nobility) enjoyed tax exemptions and special privileges.',
+    hint: 'Consider the fiscal inequity: who generated national wealth and paid the taille while privileged estates held tax immunities?',
+    explanation: 'The Third Estate (peasants, urban artisans, and bourgeois professionals) carried virtually the entire national tax obligation while the First Estate (clergy) and Second Estate (nobility) held feudal immunities.',
     foundationalConcept: 'Three Estates of France'
   },
   {
@@ -144,18 +186,58 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'vocabulary',
     readingDemand: 'low',
-    questionText: 'What was the Napoleonic Code, which was introduced by Napoleon Bonaparte across France and conquered territories?',
+    questionText: 'Which major reform introduced by Napoleon Bonaparte replaced conflicting feudal customs with a standardized, nationwide body of civil law?',
     options: [
-      { id: 'a', text: 'A uniform, comprehensive system of laws that treated citizens equally before the law' },
-      { id: 'b', text: 'A secret military telegraph code used by French spies' },
-      { id: 'c', text: 'A treaty returning all French lands to the Roman Catholic Church' },
-      { id: 'd', text: 'A new tax code that doubled taxes on farmers and factory workers' },
+      { id: 'a', text: 'The Napoleonic Code (Civil Code)' },
+      { id: 'b', text: 'The Concordat of Worms' },
+      { id: 'c', text: 'The Continental System Embargo' },
+      { id: 'd', text: 'The Edict of Nantes' },
     ],
     correctOptionId: 'a',
-    hint: 'Napoleon replaced hundreds of conflicting local feudal customs with one single legal code.',
-    explanation: 'The Napoleonic Code standardized laws throughout France, abolishing feudal privileges and establishing legal equality and religious toleration, influencing legal systems globally.',
+    hint: 'This legal framework established universal equality before the law, property protections, and secular civil authority.',
+    explanation: 'The Napoleonic Code unified French law into a single rational framework, ending feudal privileges and establishing legal equality and religious toleration across France and conquered Europe.',
     foundationalConcept: 'The Napoleonic Code'
   },
+  {
+    id: 'u1-t2-rousseau-general-will',
+    unit: 'unit1',
+    unitName: 'Unit 1: Absolutism & Revolutions',
+    tier: 2,
+    skill: 'cause_effect',
+    readingDemand: 'medium',
+    questionText: 'In "The Social Contract" (1762), Jean-Jacques Rousseau argued that authentic political legitimacy relies on the "General Will." What does this principle require of society?',
+    options: [
+      { id: 'a', text: 'Public policy must reflect the collective common good of the community rather than factional private self-interests' },
+      { id: 'b', text: 'A ruling monarch should rule unchecked as long as foreign trade remains profitable' },
+      { id: 'c', text: 'Citizens must permanently forfeit personal liberties to an autocratic military commander' },
+      { id: 'd', text: 'Only aristocratic property owners should possess voting franchise in civic elections' },
+    ],
+    correctOptionId: 'a',
+    hint: 'Rousseau emphasized that true civic liberty is achieved when citizens participate directly in crafting laws aimed at the shared welfare of all.',
+    explanation: 'Rousseau\'s concept of the General Will posited that legitimate laws express the collective interest of all citizens for the shared good, forming the basis for popular sovereignty.',
+    foundationalConcept: 'Rousseau & The General Will'
+  },
+  {
+    id: 'u1-t2-bolivar-enlightenment',
+    unit: 'unit1',
+    unitName: 'Unit 1: Absolutism & Revolutions',
+    tier: 2,
+    skill: 'cause_effect',
+    readingDemand: 'medium',
+    questionText: 'How did European Enlightenment ideals combined with Napoleon\'s invasion of the Iberian Peninsula impact Latin American independence struggles led by leaders like Simón Bolívar?',
+    options: [
+      { id: 'a', text: 'Creole leaders applied ideas of natural rights and exploited Spain\'s wartime crisis under French occupation to launch wars of liberation' },
+      { id: 'b', text: 'Latin American colonies petitioned the British Crown to incorporate them directly into the British Empire' },
+      { id: 'c', text: 'Spanish viceroys voluntarily abdicated power to establish agrarian collective communes' },
+      { id: 'd', text: 'Napoleon deployed French armies across South America to create direct democratic republics' },
+    ],
+    correctOptionId: 'a',
+    hint: 'When Napoleon deposed Spain\'s King Ferdinand VII in 1808, educated Creoles argued sovereignty had reverted to the colonial people.',
+    explanation: 'Simón Bolívar and other Creole leaders were steeped in Enlightenment philosophy; Napoleon\'s invasion of Spain weakened royal authority, providing the opening for Latin American revolutions.',
+    foundationalConcept: 'Latin American Independence Movements'
+  },
+
+  // --- Tier 3 (Analytical & Primary Source Analysis) ---
   {
     id: 'u1-t3-galileo-excerpt',
     unit: 'unit1',
@@ -163,21 +245,21 @@ export const QUESTION_BANK: Question[] = [
     tier: 3,
     skill: 'source_analysis',
     readingDemand: 'high',
-    questionText: 'Read the historical passage below. To whom is scientist Galileo Galilei referring when he writes about "these men"?',
+    questionText: 'Analyze the 1615 primary source excerpt below. Which institutional tension of the Scientific Revolution does Galileo address?',
     excerpt: {
-      author: 'Galileo Galilei, Italian scientist and astronomer',
-      date: '1615 Letter to Grand Duchess Christina',
+      author: 'Galileo Galilei, Italian astronomer and physicist',
+      date: '1615 Letter to the Grand Duchess Christina',
       text: '"I hold the sun to be situated motionless in the center of the revolution of the celestial orbs while the earth revolves about the sun... [T]hese men have resolved to fabricate a shield for their fallacies out of the authority of the Bible. These they apply with little judgment to the refutation of arguments that they do not understand and have not even listened to."'
     },
     options: [
-      { id: 'a', text: 'Religious leaders and Church authorities defending geocentric dogma' },
-      { id: 'b', text: 'Blacksmiths and factory workers in industrial cities' },
-      { id: 'c', text: 'Naval captains navigating the Atlantic trade routes' },
-      { id: 'd', text: 'Peasants protesting grain taxes in rural France' },
+      { id: 'a', text: 'The conflict between empirical astronomical observation and traditional theological biblical dogma' },
+      { id: 'b', text: 'Labor disputes between guild craftsmen and industrial manufacturing plant owners' },
+      { id: 'c', text: 'Diplomatic trade negotiations between Atlantic merchants and royal navies' },
+      { id: 'd', text: 'Agrarian rebellions caused by bread taxes in early modern rural provinces' },
     ],
     correctOptionId: 'a',
-    hint: 'Notice Galileo mentions people using the "authority of the Bible" to silence scientific findings about the earth orbiting the sun.',
-    explanation: 'Galileo was defending his heliocentric observations against Catholic Church officials and conservative theologians who argued that Copernican astronomy directly contradicted biblical scripture.',
+    hint: 'Galileo criticizes detractors who use religious scripture as a defensive shield to refute telescopic scientific evidence.',
+    explanation: 'Galileo was defending heliocentric astronomy against Church authorities and traditionalists who maintained that the Copernican model contradicted scripture and geocentric dogma.',
     foundationalConcept: 'Scientific Revolution vs Church Dogma'
   },
   {
@@ -187,21 +269,21 @@ export const QUESTION_BANK: Question[] = [
     tier: 3,
     skill: 'source_analysis',
     readingDemand: 'high',
-    questionText: 'Based on this primary source from Leviathan (1651), what does Thomas Hobbes argue is necessary to establish laws and maintain order?',
+    questionText: 'Based on this passage from Leviathan (1651), what foundational requirement does Thomas Hobbes identify for preventing lawlessness in civil society?',
     excerpt: {
-      author: 'Thomas Hobbes',
+      author: 'Thomas Hobbes, English political philosopher',
       sourceTitle: 'Leviathan (1651)',
       text: '"The Desires, and other Passions of man, are in themselves no Sin. No more are the Actions, that proceed from those Passions, till they know a Law that forbids them: which till Lawes be made they cannot know: nor can any Law be made, till they have agreed upon the Person that shall make it."'
     },
     options: [
-      { id: 'a', text: 'People must agree to grant supreme authority to a single sovereign ruler to enforce laws' },
-      { id: 'b', text: 'Each person should create and enforce their own personal moral guidelines' },
-      { id: 'c', text: 'All government institutions should be dissolved to let humans live in nature' },
-      { id: 'd', text: 'Military generals should hold annual elections to vote on new tax laws' },
+      { id: 'a', text: 'Citizens must collectively vest absolute authority in a recognized sovereign entity capable of enacting and enforcing binding laws' },
+      { id: 'b', text: 'Every individual must be permitted to establish and enforce personalized moral codes independently' },
+      { id: 'c', text: 'Formal governmental bodies should be abolished to permit humanity to live in a state of nature' },
+      { id: 'd', text: 'Military commanders should hold mandatory weekly popular ballots on legal statutes' },
     ],
     correctOptionId: 'a',
-    hint: 'Hobbes believed that without a strong, agreed-upon sovereign ("the Person that shall make it"), life in the state of nature would be solitary, poor, nasty, brutish, and short.',
-    explanation: 'Hobbes argued that human passions create chaos without law, and laws can only exist when society enters a contract surrendering power to a strong sovereign ruler (an absolute authority).',
+    hint: 'Hobbes believed that without a recognized single sovereign authority to impose rules, human passions inevitably plunge society into brutish civil war.',
+    explanation: 'Hobbes argued that human desires inevitably generate conflict in the state of nature, requiring society to surrender power via social contract to an absolute sovereign to maintain peace and enforce law.',
     foundationalConcept: 'Hobbesian Social Contract & Leviathan'
   },
   {
@@ -224,22 +306,24 @@ export const QUESTION_BANK: Question[] = [
         'Crops and grain in the background are being eaten by birds and rabbits that commoners were forbidden by law to hunt.'
       ]
     },
-    questionText: 'What is the primary message the cartoonist is conveying to the viewer about French society in 1789?',
+    questionText: 'Analyze the visual allegorical imagery in this 1789 French revolutionary cartoon. What central social commentary is the artist delivering?',
     options: [
-      { id: 'a', text: 'The impoverished Third Estate is carrying the entire social and financial burden of the country' },
-      { id: 'b', text: 'The French nobility and clergy work closely together to help poor farmers' },
-      { id: 'c', text: 'French peasants enjoyed carrying nobles on their backs during royal holidays' },
-      { id: 'd', text: 'The French monarchy was completely fair and equal to all social classes' },
+      { id: 'a', text: 'The impoverished Third Estate commoner carries the crushing economic and social weight of the privileged clergy and nobility' },
+      { id: 'b', text: 'French aristocrats and clergy routinely performed manual agrarian labor alongside common tenant farmers' },
+      { id: 'c', text: 'Peasants celebrated monarchical feudal obligations through traditional festive displays' },
+      { id: 'd', text: 'The French estate framework distributed taxation equitably across all three orders' },
     ],
     correctOptionId: 'a',
-    hint: 'Look at the visual metaphor: who is struggling under the weight, and who is riding comfortably on top?',
-    explanation: 'This iconic revolutionary cartoon satirizes the unfair estate system, showing the commoners (Third Estate) bearing the heavy load of supporting the privileged clergy and nobility.',
+    hint: 'Look closely at the physical hierarchy: who is broken on the ground, and which two privileged classes ride atop him?',
+    explanation: 'The cartoon satirizes the injustice of Ancien Régime society, portraying the Third Estate peasant carrying the burden of the First Estate (clergy) and Second Estate (nobility).',
     foundationalConcept: 'Visual Analysis: Three Estates Metaphor'
   },
 
-  // ==========================================
-  // UNIT 2: INDUSTRIAL REVOLUTION & SOCIAL IMPACT
-  // ==========================================
+  // ==========================================================================
+  // UNIT 2: INDUSTRIAL REVOLUTION & SOCIAL IMPACT (15 Questions)
+  // ==========================================================================
+
+  // --- Tier 1 (Recall & Core Vocabulary) ---
   {
     id: 'u2-t1-resources-coal',
     unit: 'unit2',
@@ -247,16 +331,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 1,
     skill: 'recall',
     readingDemand: 'low',
-    questionText: 'Which plentiful natural mineral resource found in Great Britain was most vital in powering steam engines and smelting iron during the Industrial Revolution?',
+    questionText: 'Which abundant domestic mineral fuel provided Great Britain with the energy required to fire smelting furnaces and drive high-pressure steam machinery during early industrialization?',
     options: [
       { id: 'a', text: 'Coal' },
-      { id: 'b', text: 'Petroleum oil' },
-      { id: 'c', text: 'Uranium' },
-      { id: 'd', text: 'Natural gas' },
+      { id: 'b', text: 'Petroleum crude oil' },
+      { id: 'c', text: 'Uranium ore' },
+      { id: 'd', text: 'Compressed natural gas' },
     ],
     correctOptionId: 'a',
-    hint: 'Britain had massive underground deposits of this dark rock fuel near its rivers and iron mines.',
-    explanation: 'Abundant supplies of coal fueled steam engines and powered the smelting of iron ore, providing the energy foundation for British industrial dominance.',
+    hint: 'Extensive underground seams of this carbon-rich rock lay situated near navigable English waterways and iron deposits.',
+    explanation: 'Britain\'s vast domestic coal fields provided cheap, concentrated energy to fuel James Watt\'s steam engines and smelt iron ore, launching Britain into industrial leadership.',
     foundationalConcept: 'Natural Resources & Steam Power'
   },
   {
@@ -266,16 +350,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 1,
     skill: 'vocabulary',
     readingDemand: 'low',
-    questionText: 'As rural families flooded into industrial boomtowns seeking factory work, poor working-class families were packed into filthy, multi-story slum apartments known as:',
+    questionText: 'During the rapid expansion of industrial cities, low-wage factory laborers were typically housed in crowded, poorly ventilated multi-story urban tenements characterized by:',
     options: [
-      { id: 'a', text: 'Tenements' },
-      { id: 'b', text: 'Manors' },
-      { id: 'c', text: 'Cottages' },
-      { id: 'd', text: 'Plantations' },
+      { id: 'a', text: 'Severe overcrowding, lack of running plumbing, and rampant infectious diseases' },
+      { id: 'b', text: 'Private landscaped courtyards and dedicated family medical clinics' },
+      { id: 'c', text: 'Guaranteed government homeownership subsidies' },
+      { id: 'd', text: 'Free agrarian garden plots for every tenant household' },
     ],
     correctOptionId: 'a',
-    hint: 'These crowded buildings lacked running water, ventilation, or sanitation, leading to frequent cholera outbreaks.',
-    explanation: 'Tenements were cramped, multi-family apartment buildings located in urban industrial slums, notorious for hazardous sanitation and rapid spread of disease.',
+    hint: 'These hurried structures lacked basic drainage or sewage, turning early industrial neighborhoods into incubators for cholera and typhus.',
+    explanation: 'Tenements were cramped, poorly built apartment buildings in industrial slums, notorious for unsanitary conditions, lack of clean water, and high mortality rates.',
     foundationalConcept: 'Urban Slums & Tenements'
   },
   {
@@ -285,18 +369,58 @@ export const QUESTION_BANK: Question[] = [
     tier: 1,
     skill: 'recall',
     readingDemand: 'low',
-    questionText: 'During the first wave of British industrialization in the late 1700s, the first major mechanized factories primarily produced:',
+    questionText: 'Which manufacturing sector was the first to transition from rural domestic hand labor into centralized, water- and steam-powered mechanized factories in 18th-century Britain?',
     options: [
-      { id: 'a', text: 'Textiles and cotton cloth' },
-      { id: 'b', text: 'Automobiles and trucks' },
-      { id: 'c', text: 'Chemical fertilizers' },
-      { id: 'd', text: 'Electrical appliances' },
+      { id: 'a', text: 'Textiles and cotton cloth manufacturing' },
+      { id: 'b', text: 'Motorized automobile fabrication' },
+      { id: 'c', text: 'Synthetic chemical pharmaceuticals' },
+      { id: 'd', text: 'Electrical domestic appliance assembly' },
     ],
     correctOptionId: 'a',
-    hint: 'Inventions like the spinning jenny and water frame transformed the production of thread and clothing fabric.',
-    explanation: 'The textile industry was the first to undergo full industrialization, using water- and steam-powered spinning and weaving machinery to dramatically speed up cloth manufacturing.',
+    hint: 'Innovations including the flying shuttle, spinning jenny, and power loom transformed thread and yarn production.',
+    explanation: 'Mechanized textile production pioneered the modern factory system, utilizing water and steam power to turn raw cotton into cloth at speeds never before achieved.',
     foundationalConcept: 'Textile Mechanization'
   },
+  {
+    id: 'u2-t1-enclosure-movement',
+    unit: 'unit2',
+    unitName: 'Unit 2: Industrial Revolution',
+    tier: 1,
+    skill: 'recall',
+    readingDemand: 'low',
+    questionText: 'In 18th-century Britain, parliamentary legislation enabled wealthy landlords to fence off and consolidate shared village grazing pastures, an agricultural shift known as the:',
+    options: [
+      { id: 'a', text: 'Enclosure Movement' },
+      { id: 'b', text: 'Great Agrarian Migration' },
+      { id: 'c', text: 'Feudal Restoration Acts' },
+      { id: 'd', text: 'Colonial Plantation Charter' },
+    ],
+    correctOptionId: 'a',
+    hint: 'Landowners literally fenced in or "enclosed" traditional common lands, driving small peasant farmers off subsistence plots.',
+    explanation: 'The Enclosure Acts consolidated scattered strips and common pastures into large fenced private farms, boosting food productivity while driving displaced peasants to factory cities.',
+    foundationalConcept: 'Enclosure Movement & Labor Supply'
+  },
+  {
+    id: 'u2-t1-cottage-industry',
+    unit: 'unit2',
+    unitName: 'Unit 2: Industrial Revolution',
+    tier: 1,
+    skill: 'vocabulary',
+    readingDemand: 'low',
+    questionText: 'Before the advent of steam-powered textile mills, manufactured goods like spun yarn and handwoven cloth were created in rural homes under a decentralized setup known as the:',
+    options: [
+      { id: 'a', text: 'Cottage Industry (Domestic System)' },
+      { id: 'b', text: 'Mass Assembly Line Setup' },
+      { id: 'c', text: 'Corporate Conglomerate Model' },
+      { id: 'd', text: 'Urban Industrial Guild System' },
+    ],
+    correctOptionId: 'a',
+    hint: 'Merchants distributed raw wool and cotton directly to peasant cottages for spinning and weaving on manual home wheels.',
+    explanation: 'The domestic or cottage industry relied on family labor working at home with manual hand tools before steam-powered factories centralized production under clock-driven supervisors.',
+    foundationalConcept: 'Pre-Industrial Domestic System'
+  },
+
+  // --- Tier 2 (Conceptual & Cause/Effect) ---
   {
     id: 'u2-t2-factors-production',
     unit: 'unit2',
@@ -304,16 +428,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'vocabulary',
     readingDemand: 'low',
-    questionText: 'What are the three essential economic "factors of production" required to launch industrial manufacturing?',
+    questionText: 'Economists identify three indispensable economic "factors of production" that must converge to establish and expand industrialized manufacturing:',
     options: [
-      { id: 'a', text: 'Land, labor, and capital' },
-      { id: 'b', text: 'Monarchy, religion, and military' },
-      { id: 'c', text: 'Gold, silver, and spices' },
-      { id: 'd', text: 'Tariffs, embargos, and treaties' },
+      { id: 'a', text: 'Land (resources), labor (workforce), and capital (wealth/machinery)' },
+      { id: 'b', text: 'Monarchy, clerical authority, and military garrisons' },
+      { id: 'c', text: 'Precious metals, spice monopolies, and trade tariffs' },
+      { id: 'd', text: 'Diplomatic treaties, naval blockades, and colonial charters' },
     ],
     correctOptionId: 'a',
-    hint: 'You need natural resources (ground/water), workers to operate the machines, and money/tools to build the factories.',
-    explanation: 'The factors of production are land (natural resources), labor (available workforce), and capital (money, machinery, and investments) necessary to produce goods.',
+    hint: 'Think about what is needed: natural raw materials, people to operate the equipment, and financial investment to build the enterprise.',
+    explanation: 'The foundational factors of production are land (natural resources like coal, rivers, and ore), labor (an available industrial workforce), and capital (financial investment and machinery).',
     foundationalConcept: 'Economic Factors of Production'
   },
   {
@@ -323,16 +447,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'cause_effect',
     readingDemand: 'medium',
-    questionText: 'After shocking parliamentary testimonies exposed dangerous factory conditions, the British Factory Act of 1833 was passed primarily to reform labor practices for:',
+    questionText: 'Following public exposure of dangerous working conditions in British textile mills, Parliament intervened with the Factory Act of 1833 primarily to regulate:',
     options: [
-      { id: 'a', text: 'Child laborers (limiting daily working hours and setting age minimums)' },
-      { id: 'b', text: 'Factory owners (giving them tax exemptions on coal)' },
-      { id: 'c', text: 'Foreign merchants (eliminating all import shipping fees)' },
-      { id: 'd', text: 'Adult male coal miners (providing pension funds)' },
+      { id: 'a', text: 'Child labor (establishing minimum employment ages and capping daily working hours)' },
+      { id: 'b', text: 'Corporate taxation (granting factory owners complete exemptions on coal tariffs)' },
+      { id: 'c', text: 'Foreign merchants (banning all imported raw cotton from overseas markets)' },
+      { id: 'd', text: 'Military enlistment (requiring factory managers to join the royal infantry)' },
     ],
     correctOptionId: 'a',
-    hint: 'Small children had been working 12 to 16 hours a day crawling under moving machinery in textile mills.',
-    explanation: 'The Factory Act of 1833 made it illegal to hire children under age 9 in textile mills and mandated hours limits and factory schooling for older children.',
+    hint: 'Medical and parliamentary investigations highlighted eight-year-olds working 14-hour days inside hazardous mills.',
+    explanation: 'The British Factory Act of 1833 outlawed the employment of children under nine in textile mills and restricted working hours for older children, establishing factory inspectors for enforcement.',
     foundationalConcept: 'Labor Reform & Factory Acts'
   },
   {
@@ -342,36 +466,17 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'vocabulary',
     readingDemand: 'medium',
-    questionText: 'Karl Marx and Friedrich Engels argued in The Communist Manifesto that human history is a history of class struggles between the:',
+    questionText: 'In The Communist Manifesto (1848), Karl Marx and Friedrich Engels asserted that human historical development is fundamentally propelled by conflict between the:',
     options: [
-      { id: 'a', text: 'Bourgeoisie (factory owners) and Proletariat (working class)' },
-      { id: 'b', text: 'Absolute kings and Catholic church bishops' },
-      { id: 'c', text: 'Rural farmers and overseas explorers' },
-      { id: 'd', text: 'Scientists and ancient philosophers' },
+      { id: 'a', text: 'Bourgeoisie (capitalist factory owners) and Proletariat (industrial wage laborers)' },
+      { id: 'b', text: 'Hereditary royalty and ecclesiastical authorities' },
+      { id: 'c', text: 'Subsistence agrarian farmers and ocean-going merchant explorers' },
+      { id: 'd', text: 'Natural scientists and classical scholastic philosophers' },
     ],
     correctOptionId: 'a',
-    hint: 'Marx believed the wealthy owners of capital exploited the workers who actually did the labor in the factories.',
-    explanation: 'Marx analyzed industrial society as a battle between the wealthy capitalist class who owned the means of production (Bourgeoisie) and the wage laborers who owned only their labor (Proletariat).',
+    hint: 'Marx analyzed the clash between the owners of the means of production and the workers who sell their labor to survive.',
+    explanation: 'Marx argued that industrial capitalism deepened class struggle between the bourgeoisie (who own capital and manufacturing tools) and the proletariat (who own only their labor power).',
     foundationalConcept: 'Marxism: Bourgeoisie vs Proletariat'
-  },
-  {
-    id: 'u2-t2-enclosure-movement',
-    unit: 'unit2',
-    unitName: 'Unit 2: Industrial Revolution',
-    tier: 2,
-    skill: 'cause_effect',
-    readingDemand: 'medium',
-    questionText: 'How did the Enclosure Movement in 18th-century Great Britain directly stimulate the Industrial Revolution?',
-    options: [
-      { id: 'a', text: 'It consolidated common farming lands into large private farms, forcing displaced peasants to move to cities for factory jobs' },
-      { id: 'b', text: 'It forced all city residents to return to rural villages to grow cotton' },
-      { id: 'c', text: 'It banned the use of steam power in agricultural fields' },
-      { id: 'd', text: 'It gave free farmland to any worker who refused to join a labor union' },
-    ],
-    correctOptionId: 'a',
-    hint: 'Wealthy landlords fenced off public village fields, leaving small tenant farmers without grazing land.',
-    explanation: 'The Enclosure Movement fenced off shared village pastures for large-scale farming, boosting crop efficiency while driving millions of dislocated peasant families into crowded industrial cities to find work.',
-    foundationalConcept: 'Enclosure Movement & Labor Migration'
   },
   {
     id: 'u2-t2-sepoy-rebellion',
@@ -380,18 +485,58 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'cause_effect',
     readingDemand: 'medium',
-    questionText: 'Why was India referred to as the "Jewel in the Crown" of the British Empire during the 19th-century era of imperialism?',
+    questionText: 'Why did 19th-century British imperial policymakers prize colonial India as the imperial centerpiece known as the "Jewel in the Crown"?',
     options: [
-      { id: 'a', text: 'It provided vast quantities of raw materials (cotton, tea) and a massive captive consumer market for British manufactured goods' },
-      { id: 'b', text: 'It was the only place in the world where British monarchs could hold coronation ceremonies' },
-      { id: 'c', text: 'It was completely exempt from paying taxes to the British East India Company' },
-      { id: 'd', text: 'It supplied all of Britain’s coal and iron ore supplies' },
+      { id: 'a', text: 'India provided vital industrial raw materials (cotton, jute, tea) and served as an enormous captive consumer market for British factory output' },
+      { id: 'b', text: 'India was the exclusive site where British monarchs could hold formal royal coronation ceremonies' },
+      { id: 'c', text: 'India was exempted from paying any administrative fees or commercial revenues to London' },
+      { id: 'd', text: 'India supplied all domestic coal and iron reserves consumed by factories in Great Britain' },
     ],
     correctOptionId: 'a',
-    hint: 'India’s enormous population and rich resources made it Britain’s most lucrative and valued colony.',
-    explanation: 'India was called the "Jewel in the Crown" because of its immense population (which bought British factory goods) and its rich agricultural resources (cotton, jute, tea, and indigo) fueling British mills.',
+    hint: 'Consider the dual economic engine: Britain extracted colonial raw agricultural commodities and sold manufactured textiles back to 300 million Indian consumers.',
+    explanation: 'India was dubbed the "Jewel in the Crown" because its vast population provided both indispensable agricultural raw commodities for British mills and a guaranteed captive market for British factory goods.',
     foundationalConcept: 'Imperialism: Jewel in the Crown'
   },
+  {
+    id: 'u2-t2-middle-class-growth',
+    unit: 'unit2',
+    unitName: 'Unit 2: Industrial Revolution',
+    tier: 2,
+    skill: 'cause_effect',
+    readingDemand: 'medium',
+    questionText: 'How did the expansion of industrial capitalism alter the social fabric and civic hierarchy of 19th-century Western European nations?',
+    options: [
+      { id: 'a', text: 'It created an influential, affluent middle class of industrialists, bankers, and professionals alongside a broad industrial working class' },
+      { id: 'b', text: 'It totally erased income and wealth disparities between factory owners and manual laborers' },
+      { id: 'c', text: 'It forced hereditary landed nobles to surrender their country manors and work in underground coal pits' },
+      { id: 'd', text: 'It led to the immediate depopulation of major cities in favor of medieval self-sufficient villages' },
+    ],
+    correctOptionId: 'a',
+    hint: 'Wealth was no longer tied solely to hereditary land ownership; industrial enterprise built an entirely new commercial elite and professional middle tier.',
+    explanation: 'Industrialization elevated the commercial and professional middle class (the bourgeoisie) to political power and social dominance, while creating a distinct class-conscious industrial proletariat.',
+    foundationalConcept: 'Rise of the Industrial Middle Class'
+  },
+  {
+    id: 'u2-t2-urban-environment-pollution',
+    unit: 'unit2',
+    unitName: 'Unit 2: Industrial Revolution',
+    tier: 2,
+    skill: 'cause_effect',
+    readingDemand: 'medium',
+    questionText: 'What was a severe environmental and epidemiological outcome of rapid, unregulated factory growth in 19th-century British industrial hubs like Manchester and Leeds?',
+    options: [
+      { id: 'a', text: 'Pervasive coal smog fouled municipal air, while untreated industrial and human runoff contaminated rivers, sparking recurrent cholera epidemics' },
+      { id: 'b', text: 'Farmland adjacent to cities suffered acute droughts due to automated saltwater desalinization' },
+      { id: 'c', text: 'Urban centers were converted into pollution-free green corridors under early solar legislation' },
+      { id: 'd', text: 'Industrial wastewater was safely propelled into subterranean caverns without affecting public drinking pumps' },
+    ],
+    correctOptionId: 'a',
+    hint: 'Lacking sewage infrastructure, waste was dumped directly into rivers like the Irwell and Thames, contaminating drinking supplies.',
+    explanation: 'Explosive urban migration outpaced basic municipal sanitation, leading to suffocating coal smoke, open sewage running into drinking wells, and deadly outbreaks of waterborne cholera.',
+    foundationalConcept: 'Urban Pollution & Public Health Crises'
+  },
+
+  // --- Tier 3 (Analytical & Primary Source Analysis) ---
   {
     id: 'u2-t3-berlin-foundry-excerpt',
     unit: 'unit2',
@@ -399,21 +544,21 @@ export const QUESTION_BANK: Question[] = [
     tier: 3,
     skill: 'source_analysis',
     readingDemand: 'high',
-    questionText: 'Read the 1844 factory rules excerpt below. What does this document illustrate about the nature of industrial factory labor compared to traditional pre-industrial farm work?',
+    questionText: 'Examine this 1844 factory rulebook passage. What fundamental behavioral contrast does this document reveal between industrial work and traditional pre-industrial rural farming?',
     excerpt: {
       sourceTitle: 'Rules of the Foundry & Engineering Works, Berlin',
       date: '1844 Factory Rulebook',
       text: '"The normal working day begins at all seasons at 6 a.m. precisely and ends at 7 p.m. ... Workers arriving 2 minutes late shall lose half an hour\'s wages; whoever is more than 2 minutes late may not start work until after the next break. Any disputes about the correct time shall be settled by the clock mounted above the gatekeeper\'s lodge."'
     },
     options: [
-      { id: 'a', text: 'Workers’ lives became strictly governed by rigid clock time, long shifts, and severe financial penalties' },
-      { id: 'b', text: 'Workers were allowed to negotiate flexible hours and work schedules directly with their families' },
-      { id: 'c', text: 'Workers were paid based on individual quality of craftsmanship rather than hours on site' },
-      { id: 'd', text: 'Factory owners encouraged workers to take frequent breaks whenever they felt fatigued' },
+      { id: 'a', text: 'Industrial labor was subjugated to unrelenting clock synchronization, rigid discipline, and severe financial penalties for minor infractions' },
+      { id: 'b', text: 'Industrial workers retained autonomy to adapt daily work schedules according to seasonal sunlight and personal family needs' },
+      { id: 'c', text: 'Compensation was determined solely by individual artistic craftsmanship rather than measured hours spent on the manufacturing floor' },
+      { id: 'd', text: 'Supervisors prioritized worker wellness by instituting hourly rest intervals whenever fatigue appeared' },
     ],
     correctOptionId: 'a',
-    hint: 'Notice the exact clock times, 2-minute late penalties, and lost wages. Work was no longer guided by the natural sun cycle.',
-    explanation: 'The factory system replaced seasonal, sun-based agricultural rhythm with rigid machine time discipline, imposing strict schedules, long 13-hour days, and punitive fines for minor tardiness.',
+    hint: 'Observe the exacting enforcement of minutes, docked pay for minor tardiness, and reliance on the gatekeeper\'s clock.',
+    explanation: 'Unlike pre-industrial farm work paced by seasons and daylight, industrial capitalism imposed rigid machine-time discipline, governing worker behavior with fines and strict clock schedules.',
     foundationalConcept: 'Factory System Discipline & Clock Time'
   },
   {
@@ -423,15 +568,15 @@ export const QUESTION_BANK: Question[] = [
     tier: 3,
     skill: 'source_analysis',
     readingDemand: 'medium',
-    questionText: 'At the Berlin Conference of 1884–1885, European imperialist powers gathered to set rules for the "Scramble for Africa." What was the most significant reality of this conference?',
+    questionText: 'At the Berlin Conference of 1884–1885, European imperial powers established regulatory guidelines for the "Scramble for Africa." What was the defining political reality of this summit?',
     options: [
-      { id: 'a', text: 'European leaders carved up the African continent among themselves without a single African leader present or invited' },
-      { id: 'b', text: 'African kings were granted equal voting rights alongside European prime ministers' },
-      { id: 'c', text: 'European nations voted to immediately dismantle all overseas military garrisons' },
-      { id: 'd', text: 'The conference outlawed all European mining and rubber extraction throughout Africa' },
+      { id: 'a', text: 'European diplomats partitioned the African continent among themselves without extending a single invitation to African heads of state or representatives' },
+      { id: 'b', text: 'Indigenous African monarchs were granted equal voting suffrage alongside European chancellors' },
+      { id: 'c', text: 'European governments unanimously voted to demilitarize all African colonial harbors' },
+      { id: 'd', text: 'The conference prohibited all European commercial mining and rubber extraction throughout Africa' },
     ],
     correctOptionId: 'a',
-    hint: 'Fourteen European nations drew arbitrary borders across Africa to avoid war among themselves, completely ignoring native ethnic and tribal boundaries.',
+    hint: 'Fourteen European powers drew arbitrary boundary lines across Africa to prevent wars among themselves, ignoring native ethnic and cultural borders.',
     explanation: 'The Berlin Conference regulated European colonization and trade in Africa. Zero African representatives were invited or consulted as European empires divided the continent into artificial colonies.',
     foundationalConcept: 'Berlin Conference & Scramble for Africa'
   },
@@ -442,22 +587,48 @@ export const QUESTION_BANK: Question[] = [
     tier: 3,
     skill: 'source_analysis',
     readingDemand: 'high',
-    questionText: 'How did European imperialists use the pseudo-scientific theory of "Social Darwinism" in the late 19th century to justify their colonial conquest of Asian and African peoples?',
+    questionText: 'How did European imperialist theorists apply the pseudo-scientific ideology of "Social Darwinism" during the late 19th century to justify colonial subjugation?',
     options: [
-      { id: 'a', text: 'They argued that human societies were in a "survival of the fittest" struggle and European dominance was natural and morally justified' },
-      { id: 'b', text: 'They argued that all human cultures possessed equal evolutionary strengths and deserved self-rule' },
-      { id: 'c', text: 'They claimed that natural selection proved industrial factories were harmful to human biological development' },
-      { id: 'd', text: 'They used it to encourage European factory workers to rebel against company managers' },
+      { id: 'a', text: 'They argued that human societies were locked in a "survival of the fittest" struggle and that European dominion demonstrated biological and cultural superiority' },
+      { id: 'b', text: 'They asserted that all global civilizations possessed equal evolutionary vigor and were entitled to self-determination' },
+      { id: 'c', text: 'They maintained that biological evolution proved mechanical technology degraded human cognitive capacity' },
+      { id: 'd', text: 'They used it to encourage industrial laborers to unionize against corporate management' },
     ],
     correctOptionId: 'a',
-    hint: 'Social Darwinism distorted Charles Darwin\'s biological theories on natural selection to justify racist ideologies and colonial domination.',
-    explanation: 'Social Darwinists misapplied evolutionary concepts like "survival of the fittest" to human races and nations, claiming imperial conquest and the "White Man\'s Burden" were scientific proof of racial superiority.',
+    hint: 'Social Darwinism misapplied biological evolutionary theories to justify racial hierarchies and imperial conquest as the natural order.',
+    explanation: 'Imperialists distorted Charles Darwin\'s biological concepts to argue that dominant nations and races were inherently superior, framing colonial exploitation as natural selection and a civilizing mission.',
     foundationalConcept: 'Social Darwinism as Imperialist Justification'
   },
+  {
+    id: 'u2-t3-child-labor-testimony',
+    unit: 'unit2',
+    unitName: 'Unit 2: Industrial Revolution',
+    tier: 3,
+    skill: 'source_analysis',
+    readingDemand: 'high',
+    questionText: 'Read this sworn testimony delivered before the British Parliamentary Sadler Committee in 1832. What primary workplace reality does Elizabeth Bentley illustrate?',
+    excerpt: {
+      author: 'Elizabeth Bentley, former child worker',
+      sourceTitle: 'Report of the Parliamentary Committee on Factory Children\'s Labor (Sadler Report, 1832)',
+      text: '"Q: What time did you begin work at the flax-mill? A: When I was eight years old. Q: What were your hours of labor? A: From 5 in the morning to 9 at night. Q: What time was allowed for meals? A: Forty minutes at noon. Q: Had you time to eat breakfast or afternoon refreshment? A: No, we had to eat it as we could, while working on our feet, or let it alone."'
+    },
+    options: [
+      { id: 'a', text: 'Young child operatives endured punishing 16-hour shifts under relentless physical strain with negligible opportunities for rest or nutrition' },
+      { id: 'b', text: 'Factory supervisors provided comprehensive academic tutoring and high financial wages for young apprentices' },
+      { id: 'c', text: 'Children in textile mills were restricted by statute to two hours of gentle clerical filing each afternoon' },
+      { id: 'd', text: 'Mill employees enjoyed significantly shorter work schedules than their parents had experienced on traditional farms' },
+    ],
+    correctOptionId: 'a',
+    hint: 'Notice the daily timetable: starting work at 5:00 AM and ending at 9:00 PM without seating or regular meal breaks.',
+    explanation: 'The Sadler Committee exposed the brutal exploitation of young children in textile mills, building political momentum for parliament to enact legal limits on working hours in the Factory Act of 1833.',
+    foundationalConcept: 'The Sadler Report & Child Labor Conditions'
+  },
 
-  // ==========================================
-  // UNIT 3: WORLD WAR I, EAST ASIA & GLOBAL NATIONALISM
-  // ==========================================
+  // ==========================================================================
+  // UNIT 3: WORLD WAR I & GLOBAL IMPERIALISM (15 Questions)
+  // ==========================================================================
+
+  // --- Tier 1 (Recall & Core Vocabulary) ---
   {
     id: 'u3-t1-main-causes',
     unit: 'unit3',
@@ -465,16 +636,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 1,
     skill: 'vocabulary',
     readingDemand: 'low',
-    questionText: 'Historians use the acronym M-A-I-N to remember the four primary underlying causes of World War I. What does M-A-I-N stand for?',
+    questionText: 'Historians employ the mnemonic acronym M-A-I-N to organize the deep structural causes behind World War I. Which set of historical forces does M-A-I-N represent?',
     options: [
       { id: 'a', text: 'Militarism, Alliances, Imperialism, and Nationalism' },
-      { id: 'b', text: 'Monarchy, Agriculture, Industry, and Navigation' },
-      { id: 'c', text: 'Mercantilism, Armies, Invasions, and Navy' },
-      { id: 'd', text: 'Mobility, Aircraft, Infantry, and Neutrality' },
+      { id: 'b', text: 'Monarchy, Agriculture, Industrialism, and Navigation' },
+      { id: 'c', text: 'Mercantilism, Armies, Invasions, and Naval blockades' },
+      { id: 'd', text: 'Mobilization, Aviation, Infantry, and Neutrality pacts' },
     ],
     correctOptionId: 'a',
-    hint: 'Each letter represents a major force: building up weapons, secret defense pacts, claiming colonies, and intense country pride.',
-    explanation: 'M-A-I-N represents the deep structural causes of WWI: Militarism (arms races), Alliances (mutual defense treaties), Imperialism (global competition for colonies), and Nationalism (extreme national pride and ethnic rivalries).',
+    hint: 'Each letter refers to an overarching systemic factor: arms races, mutual defense pacts, colonial competition, and intense national chauvinism.',
+    explanation: 'The MAIN causes summarize the pre-1914 structural tensions: competitive arms expansion (Militarism), entangling treaties (Alliances), global land competition (Imperialism), and fervent patriotic rivalry (Nationalism).',
     foundationalConcept: 'M-A-I-N Causes of WWI'
   },
   {
@@ -484,16 +655,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 1,
     skill: 'recall',
     readingDemand: 'low',
-    questionText: 'What specific event on June 28, 1914 in Sarajevo acted as the immediate "spark" that triggered the outbreak of World War I?',
+    questionText: 'What geopolitical assassination on June 28, 1914 in Sarajevo ignited the July diplomatic crisis that precipitated the outbreak of World War I?',
     options: [
-      { id: 'a', text: 'The assassination of Austro-Hungarian Archduke Franz Ferdinand' },
-      { id: 'b', text: 'The German blitzkrieg invasion of Poland' },
-      { id: 'c', text: 'The sinking of the American passenger liner Lusitania' },
-      { id: 'd', text: 'The storming of the Winter Palace in Russia' },
+      { id: 'a', text: 'The shooting of Austro-Hungarian Archduke Franz Ferdinand by a Serbian nationalist' },
+      { id: 'b', text: 'The execution of Russian Tsar Nicholas II by Bolshevik guards' },
+      { id: 'c', text: 'The assassination of French Prime Minister Georges Clemenceau in Paris' },
+      { id: 'd', text: 'The fatal bombing of the German Imperial Reichstag in Berlin' },
     ],
     correctOptionId: 'a',
-    hint: 'A Serbian nationalist named Gavrilo Princip shot the heir to the Austro-Hungarian throne.',
-    explanation: 'The assassination of Archduke Franz Ferdinand by a Serbian nationalist led Austria-Hungary to declare war on Serbia, activating the web of European alliances.',
+    hint: 'Gavrilo Princip, a member of the Black Hand nationalist group, targeted the heir to the Habsburg throne.',
+    explanation: 'The assassination of Archduke Franz Ferdinand by Serbian nationalist Gavrilo Princip prompted Austria-Hungary to issue an ultimatum to Serbia, triggering the alliance system.',
     foundationalConcept: 'Spark of WWI: Sarajevo Assassination'
   },
   {
@@ -503,18 +674,58 @@ export const QUESTION_BANK: Question[] = [
     tier: 1,
     skill: 'recall',
     readingDemand: 'low',
-    questionText: 'What hazardous medical condition afflicted tens of thousands of WWI frontline soldiers as a result of standing for weeks in waterlogged, muddy trenches?',
+    questionText: 'Which debilitating medical condition affected tens of thousands of infantrymen on the Western Front due to prolonged standing in cold, muddy, waterlogged trenches?',
     options: [
       { id: 'a', text: 'Trench Foot' },
       { id: 'b', text: 'Yellow Fever' },
-      { id: 'c', text: 'The Black Death' },
+      { id: 'c', text: 'Bubonic Plague' },
       { id: 'd', text: 'Polio' },
     ],
     correctOptionId: 'a',
-    hint: 'Prolonged cold, wet boots caused painful swelling, numbness, and fungal decay in soldiers\' lower extremities.',
-    explanation: 'Trench foot was caused by continuous exposure to cold wet mud, often turning gangrenous and requiring amputation if untreated.',
+    hint: 'Continuous immersion in unsanitary mud without dry socks caused skin numbness, tissue decay, and gangrene.',
+    explanation: 'Trench foot was a severe fungal and bacterial condition caused by prolonged immersion in cold wet mud, often resulting in nerve damage and amputation for frontline soldiers.',
     foundationalConcept: 'Trench Warfare Realities'
   },
+  {
+    id: 'u3-t1-schlieffen-plan',
+    unit: 'unit3',
+    unitName: 'Unit 3: WWI & Global Imperialism',
+    tier: 1,
+    skill: 'recall',
+    readingDemand: 'low',
+    questionText: 'What was the primary military objective of Imperial Germany\'s pre-war blueprint known as the "Schlieffen Plan" in August 1914?',
+    options: [
+      { id: 'a', text: 'To rapidly overwhelm and knock France out of the conflict by invading through neutral Belgium before pivoting east to fight Russia' },
+      { id: 'b', text: 'To construct an impenetrable concrete defensive wall along the Austrian border' },
+      { id: 'c', text: 'To launch an immediate trans-Atlantic amphibious landing against American naval bases' },
+      { id: 'd', text: 'To form an unconditional diplomatic alliance with Great Britain against the Ottoman Empire' },
+    ],
+    correctOptionId: 'a',
+    hint: 'Germany calculated that slow Russian mobilization gave them a six-week window to encircle Paris via Belgium.',
+    explanation: 'The Schlieffen Plan sought to prevent a two-front war by swiftly capturing Paris through Belgium within six weeks, allowing Germany to redirect its armies eastward against Russia.',
+    foundationalConcept: 'The Schlieffen Plan & Belgium'
+  },
+  {
+    id: 'u3-t1-armenian-genocide',
+    unit: 'unit3',
+    unitName: 'Unit 3: WWI & Global Imperialism',
+    tier: 1,
+    skill: 'vocabulary',
+    readingDemand: 'low',
+    questionText: 'During the turmoil of World War I, the Young Turk government of the Ottoman Empire orchestrated systematic forced deportations, starvation marches, and massacres against which minority population?',
+    options: [
+      { id: 'a', text: 'The Armenians' },
+      { id: 'b', text: 'The Boers' },
+      { id: 'c', text: 'The Normans' },
+      { id: 'd', text: 'The Vikings' },
+    ],
+    correctOptionId: 'a',
+    hint: 'Historians estimate between 1 and 1.5 million people of this Christian ethnic group were killed or perished on forced death marches.',
+    explanation: 'The Ottoman government carried out the Armenian Genocide starting in 1915, targeting its Christian Armenian minority with mass executions and lethal deportations into the Syrian desert.',
+    foundationalConcept: 'WWI Atrocities: The Armenian Genocide'
+  },
+
+  // --- Tier 2 (Conceptual & Cause/Effect) ---
   {
     id: 'u3-t2-women-home-front',
     unit: 'unit3',
@@ -522,16 +733,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'cause_effect',
     readingDemand: 'medium',
-    questionText: 'During World War I, how did the concept of "Total War" dramatically transform the social and economic roles of women in nations like Britain and Germany?',
+    questionText: 'How did the mobilization requirements of "Total War" during 1914–1918 reshape the domestic economic position of women across combatant nations?',
     options: [
-      { id: 'a', text: 'Women took over vital jobs in munitions factories, transit, and offices, keeping wartime economies running' },
-      { id: 'b', text: 'Women were banned from public spaces and forbidden from volunteering' },
-      { id: 'c', text: 'Women were conscripted into frontline submarine crews' },
-      { id: 'd', text: 'Women were required to surrender all household property to the military' },
+      { id: 'a', text: 'Women assumed critical industrial roles in munitions plants, public transit, and agriculture, advancing the political campaign for women\'s suffrage' },
+      { id: 'b', text: 'Women were legally barred from employment and confined exclusively to domestic households' },
+      { id: 'c', text: 'Women were conscripted directly into frontline submarine crews' },
+      { id: 'd', text: 'Women were required to surrender all personal financial assets directly to the military' },
     ],
     correctOptionId: 'a',
-    hint: 'With millions of young men fighting in trenches, who stepped into the factories to produce bullets, shells, and supplies?',
-    explanation: 'Total War mobilized the entire home front. Millions of women replaced men in munitions factories, farms, and public transportation, which later strengthened the political push for women\'s voting rights (suffrage).',
+    hint: 'With millions of men at the front, female industrial workers kept the war economy alive, dramatically proving their civic contribution.',
+    explanation: 'Total War required complete societal mobilization. Millions of women entered industrial factories and transport systems, undermining arguments against female suffrage and leading to post-war voting rights.',
     foundationalConcept: 'Total War & Women\'s Wartime Labor'
   },
   {
@@ -541,16 +752,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'cause_effect',
     readingDemand: 'medium',
-    questionText: 'Why did Russia unexpectedly drop out of World War I in early 1918 before the war was concluded?',
+    questionText: 'Why did the Russian Empire formally withdraw from World War I in early 1918 prior to the general armistice on the Western Front?',
     options: [
-      { id: 'a', text: 'The Russian Bolshevik Revolution overthrew the Czar, and Lenin signed a separate peace treaty with Germany' },
-      { id: 'b', text: 'Russia had completely defeated all German armies on the Eastern Front' },
-      { id: 'c', text: 'Russia formed an alliance with the Ottoman Empire to conquer Persia' },
-      { id: 'd', text: 'The League of Nations ordered Russia to withdraw all military forces' },
+      { id: 'a', text: 'Catastrophic troop casualties and domestic food shortages sparked the Bolshevik Revolution, prompting Lenin to sign the Treaty of Brest-Litovsk' },
+      { id: 'b', text: 'Russian armies had completely defeated all German and Austro-Hungarian forces on the Eastern Front' },
+      { id: 'c', text: 'The League of Nations ordered all Eastern European combatants to immediately disarm' },
+      { id: 'd', text: 'Russia concluded a military pact with the Ottoman Empire to conquer Persia' },
     ],
     correctOptionId: 'a',
-    hint: 'Food shortages, horrific troop casualties, and worker strikes led to the Russian Revolution in 1917.',
-    explanation: 'Devastating battlefield losses and domestic famine sparked the 1917 Russian Revolution. Vladimir Lenin\'s Bolshevik government seized power and signed the Treaty of Brest-Litovsk, exiting the war.',
+    hint: 'Bread riots and battlefield mutinies led to the abdication of Tsar Nicholas II and the rise of the Bolshevik slogan "Peace, Land, and Bread."',
+    explanation: 'Severe wartime collapse and social unrest led to the 1917 Bolshevik Revolution. Vladimir Lenin\'s communist regime fulfilled its pledge to exit the war by signing the separate Treaty of Brest-Litovsk with Germany in March 1918.',
     foundationalConcept: 'Russian Revolution & Treaty of Brest-Litovsk'
   },
   {
@@ -574,16 +785,16 @@ export const QUESTION_BANK: Question[] = [
         'Red arrows indicate simultaneous two-front pressure'
       ]
     },
-    questionText: 'Looking at the map of Europe in 1914, what major geographic disadvantage did the Central Powers (Germany and Austria-Hungary) face throughout WWI?',
+    questionText: 'Based on the geopolitical map of Europe in 1914, what strategic military dilemma confronted the Central Powers (Germany and Austria-Hungary) throughout the war?',
     options: [
-      { id: 'a', text: 'They were encircled in the middle of Europe, forced to split their military forces to fight a two-front war' },
-      { id: 'b', text: 'They had no access to any railway networks or roads' },
-      { id: 'c', text: 'They were separated from the rest of the world by a vast frozen ocean' },
-      { id: 'd', text: 'Their territories consisted exclusively of isolated, small islands' },
+      { id: 'a', text: 'They occupied an encircled central landmass, forcing them to divide military manpower across simultaneous Eastern and Western fronts' },
+      { id: 'b', text: 'They possessed no inland railway infrastructure to transport heavy military hardware' },
+      { id: 'c', text: 'Their borders were completely landlocked by impassable frozen mountain chains' },
+      { id: 'd', text: 'Their territories consisted exclusively of scattered overseas tropical islands' },
     ],
     correctOptionId: 'a',
-    hint: 'Look at who was to their west (France/Britain) and who was to their east (Russia).',
-    explanation: 'The Central Powers were caught between France and Great Britain on the Western Front and the Russian Empire on the Eastern Front, forcing them to divide their armies.',
+    hint: 'Note their geographic position sandwiched between France and Britain on the west and the Russian Empire on the east.',
+    explanation: 'The Central Powers were encircled in central Europe, forcing their military command to split forces to defend against the Allies in the west and Russia in the east simultaneously.',
     foundationalConcept: 'Geographic Disadvantage: Two-Front War'
   },
   {
@@ -593,37 +804,58 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'cause_effect',
     readingDemand: 'medium',
-    questionText: 'Which two major factors provoked the United States to abandon its official policy of neutrality and declare war on Germany in April 1917?',
+    questionText: 'Which two major German provocations in early 1917 prompted President Woodrow Wilson and the US Congress to abandon neutrality and enter World War I?',
     options: [
-      { id: 'a', text: 'German unrestricted submarine warfare against commercial shipping and the intercepted Zimmermann Telegram' },
-      { id: 'b', text: 'A direct German air raid against New York City and Boston' },
-      { id: 'c', text: 'A British naval blockade that closed all American Atlantic ports' },
-      { id: 'd', text: 'Russian invasion threats against Alaska and California' },
+      { id: 'a', text: 'The resumption of unrestricted submarine warfare against commercial shipping and the intercepted Zimmermann Telegram' },
+      { id: 'b', text: 'An aerial bombing campaign carried out directly against New York harbor' },
+      { id: 'c', text: 'A British naval embargo that blockaded all domestic American ports' },
+      { id: 'd', text: 'A direct military invasion launched across the Canadian border' },
     ],
     correctOptionId: 'a',
-    hint: 'German U-boats sank American merchant ships, and a secret German diplomatic telegram offered Mexico land in the US.',
-    explanation: 'Germany resumed unrestricted submarine warfare (sinking vessels without warning) and British intelligence intercepted the Zimmermann Telegram (proposing a German-Mexican alliance against the US), prompting Congress to enter the war.',
+    hint: 'German U-boats sank merchant vessels without warning, and a decrypted German diplomatic cable offered Mexico an alliance against the US.',
+    explanation: 'Germany\'s return to unrestricted submarine warfare and the discovery of the Zimmermann Telegram (proposing a German-Mexican military alliance against the US) led the US to declare war in April 1917.',
     foundationalConcept: 'US Entry into WWI'
   },
   {
-    id: 'u3-t2-wilson-14-points',
+    id: 'u3-t2-total-war-home-front',
     unit: 'unit3',
     unitName: 'Unit 3: WWI & Global Imperialism',
     tier: 2,
-    skill: 'vocabulary',
+    skill: 'cause_effect',
     readingDemand: 'medium',
-    questionText: 'US President Woodrow Wilson’s "Fourteen Points" peace proposal strongly championed the principle of "national self-determination," which meant:',
+    questionText: 'Why do modern historians categorize World War I as the premier global example of "Total War"?',
     options: [
-      { id: 'a', text: 'Ethnic groups and distinct peoples have the right to choose their own government and national borders' },
-      { id: 'b', text: 'Victorious nations have the absolute right to conquer defeated colonies' },
-      { id: 'c', text: 'A single global dictator should be appointed by world military leaders' },
-      { id: 'd', text: 'Smaller nations should be divided equally among European empires' },
+      { id: 'a', text: 'Nations directed their entire domestic economies, civilian workforce, and industrial output to the war effort while targeting opposing civilian logistics' },
+      { id: 'b', text: 'Combat was strictly confined to volunteer naval officers, shielding all civilian economies from government regulation' },
+      { id: 'c', text: 'All hostilities concluded within twenty-four hours of the initial declaration of war' },
+      { id: 'd', text: 'Governments outlawed newspapers, radio, and private financial institutions during the conflict' },
     ],
     correctOptionId: 'a',
-    hint: 'Self-determination means a group of people determine for themselves who governs them, rather than being ruled by foreign emperors.',
-    explanation: 'Wilson\'s Fourteen Points called for national self-determination, giving diverse nationalities (like Poles, Czechs, and South Slavs) freedom from collapsed multinational empires to create independent nations.',
-    foundationalConcept: 'Wilson\'s Fourteen Points & Self-Determination'
+    hint: 'Total War erased the divide between military forces and civilian home fronts, using conscription, food rationing, and state propaganda.',
+    explanation: 'World War I was a "Total War" because governments mobilized all domestic resources—converting factories, rationing consumer goods, conscripting men, and using censorship—to secure victory.',
+    foundationalConcept: 'Total War & Home Front Mobilization'
   },
+  {
+    id: 'u3-t2-mandate-system-mideast',
+    unit: 'unit3',
+    unitName: 'Unit 3: WWI & Global Imperialism',
+    tier: 2,
+    skill: 'cause_effect',
+    readingDemand: 'medium',
+    questionText: 'Following the dissolution of the Ottoman Empire at the end of WWI, the League of Nations instituted the "Mandate System" across the Middle East. What was the practical effect of this system?',
+    options: [
+      { id: 'a', text: 'Britain and France exercised colonial administrative control over territories like Iraq, Syria, and Palestine despite earlier wartime promises of Arab sovereignty' },
+      { id: 'b', text: 'All Arab provinces were granted instantaneous complete independence and full voting seats in the League' },
+      { id: 'c', text: 'The territories were ceded permanently to direct military governance by the United States' },
+      { id: 'd', text: 'European governments withdrew all corporate petroleum investments from the region' },
+    ],
+    correctOptionId: 'a',
+    hint: 'European powers divided the lands according to the secret wartime Sykes-Picot Agreement under the guise of League "mandates."',
+    explanation: 'The Mandate System placed former Ottoman Arab territories under British and French imperial tutelage, denying Arabs promised post-war independence and creating lasting regional instability.',
+    foundationalConcept: 'The Mandate System & Middle East Partition'
+  },
+
+  // --- Tier 3 (Analytical & Primary Source Analysis) ---
   {
     id: 'u3-t3-german-general-quote',
     unit: 'unit3',
@@ -631,21 +863,21 @@ export const QUESTION_BANK: Question[] = [
     tier: 3,
     skill: 'source_analysis',
     readingDemand: 'high',
-    questionText: 'Read the quote below from a German military commander spoken right before the outbreak of WWI. What underlying cause of the war does this quote illustrate?',
+    questionText: 'Analyze this statement made by Imperial Germany’s military chief of staff in July 1914. Which systemic cause of WWI is reflected in his reasoning?',
     excerpt: {
-      author: 'German General Helmuth von Moltke',
+      author: 'German Chief of General Staff Helmuth von Moltke the Younger',
       date: 'July 1914',
       text: '"In two or three years the military superiority of our enemies would... be so great that I do not know how we could overcome them. Today we would still be a match for them."'
     },
     options: [
-      { id: 'a', text: 'Militarism and the fear of falling behind in competitive European arms buildup' },
-      { id: 'b', text: 'A desire to form an international democratic union to abolish all weapons' },
-      { id: 'c', text: 'An effort to establish religious harmony between Christian and Islamic nations' },
-      { id: 'd', text: 'A plan to replace modern machine guns with traditional cavalry swords' },
+      { id: 'a', text: 'Militarism: the intense pressure created by competitive arms races and the fear of being outpaced by rival military mobilizations' },
+      { id: 'b', text: 'Pacifism: a diplomatic desire to establish a universal treaty banning all military standing armies' },
+      { id: 'c', text: 'Ecumenicalism: an effort to reconcile religious disputes between European and Asian empires' },
+      { id: 'd', text: 'Anachronism: a military strategy designed to replace modern machine weaponry with traditional cavalry' },
     ],
     correctOptionId: 'a',
-    hint: 'The general is worried about military superiority and timing an attack before rival armies grow too powerful.',
-    explanation: 'The quote exemplifies Militarism—the rapid expansion of standing armies and fear that rival nations would gain an insurmountable military edge, incentivizing leaders to strike before being outmatched.',
+    hint: 'The general argues that war should occur immediately because rival armies (like Russia\'s) are growing too formidable.',
+    explanation: 'Von Moltke\'s statement demonstrates Militarism and pre-emptive war thinking—the logic that if a nation\'s arms expansion is being overtaken by adversaries, it must strike while it still holds tactical parity.',
     foundationalConcept: 'Source Analysis: Militarism & Arms Races'
   },
   {
@@ -669,16 +901,16 @@ export const QUESTION_BANK: Question[] = [
         'Germany stands behind Russia with a raised club, while France and Great Britain stand behind Germany threatening to retaliate.'
       ]
     },
-    questionText: 'What fatal flaw in the European political system in the summer of 1914 is this cartoon directly satirizing?',
+    questionText: 'What systemic flaw in European diplomacy prior to World War I is satirized in this July 1914 political cartoon?',
     options: [
-      { id: 'a', text: 'The rigid system of mutual defense alliances that dragged multiple great powers into a global war over a regional dispute' },
-      { id: 'b', text: 'The complete absence of standing armies in European countries' },
-      { id: 'c', text: 'The refusal of European kings to spend any money on modern defense weapons' },
-      { id: 'd', text: 'A friendly international sporting tournament among European heads of state' },
+      { id: 'a', text: 'The entangling mutual defense alliance system that transformed a localized Balkan dispute into a continent-wide general war' },
+      { id: 'b', text: 'The complete absence of standing professional armies across European powers' },
+      { id: 'c', text: 'The unwillingness of European monarchs to allocate funds for national defense' },
+      { id: 'd', text: 'A cooperative international athletics celebration between friendly neighboring states' },
     ],
     correctOptionId: 'a',
-    hint: 'Observe the domino effect: attacking one country automatically forces five other treaty partners to jump into the fight.',
-    explanation: 'The cartoon satirizes the entangling alliance system (Triple Entente vs Triple Alliance), where a local conflict between Austria-Hungary and Serbia escalated into a world war because mutual defense pledges bound powers to intervene.',
+    hint: 'Notice the chain reaction: one threat automatically activates a chain of treaty partners pulling clubs against each other.',
+    explanation: 'The cartoon satirizes how the rigid web of European defense pacts (Triple Alliance vs Triple Entente) bound powers to intervene, turning a local Austro-Serbian clash into a global conflagration.',
     foundationalConcept: 'Visual Analysis: Entangling Alliance System'
   },
   {
@@ -688,22 +920,48 @@ export const QUESTION_BANK: Question[] = [
     tier: 3,
     skill: 'cause_effect',
     readingDemand: 'high',
-    questionText: 'Article 231 of the Treaty of Versailles (1919), often referred to as the "War Guilt Clause," had what disastrous long-term consequence for European stability?',
+    questionText: 'Article 231 of the Treaty of Versailles (1919), known as the "War Guilt Clause," had what destabilizing long-term effect on European peace?',
     options: [
-      { id: 'a', text: 'It forced Germany to accept sole moral responsibility for the war and pay astronomical financial reparations, fueling bitter German resentment' },
-      { id: 'b', text: 'It granted Germany new colonies across Africa to help rebuild its commercial trade' },
-      { id: 'c', text: 'It established equal friendship and mutual debt forgiveness among all combatant nations' },
-      { id: 'd', text: 'It permanently unified Germany and Austria into a single democratic superpower' },
+      { id: 'a', text: 'It forced Germany to accept sole moral blame for the war and pay crushing financial reparations, fostering deep national grievance that extremists later exploited' },
+      { id: 'b', text: 'It granted Germany new colonial possessions in Africa to help revitalize its domestic merchant fleet' },
+      { id: 'c', text: 'It established equal debt cancellation and mutual economic cooperation among all former combatants' },
+      { id: 'd', text: 'It permanently united Germany and Austria into a unified democratic federation' },
     ],
     correctOptionId: 'a',
-    hint: 'Blaming only Germany and imposing massive monetary penalties crippled the German economy and laid the emotional groundwork for extremist politicians in the 1930s.',
-    explanation: 'The War Guilt Clause placed sole blame on Germany and levied crippling economic reparations ($33 billion). This humiliation and subsequent hyperinflation caused deep public anger that Adolf Hitler later exploited.',
+    hint: 'Assigning unilateral guilt and demanding $33 billion in reparations economically crippled the Weimar Republic and cultivated deep revanchist anger.',
+    explanation: 'Article 231 forced Germany to shoulder full responsibility for the war and pay enormous reparations. This humiliation, economic distress, and "stab-in-the-back" myth paved the way for Hitler\'s rise in the 1930s.',
     foundationalConcept: 'Treaty of Versailles: War Guilt & Reparations'
   },
+  {
+    id: 'u3-t3-wilfred-owen-poetry',
+    unit: 'unit3',
+    unitName: 'Unit 3: WWI & Global Imperialism',
+    tier: 3,
+    skill: 'source_analysis',
+    readingDemand: 'high',
+    questionText: 'Read these lines from British infantry officer Wilfred Owen\'s 1917 poem "Dulce et Decorum Est." What core critique of wartime ideology does Owen convey?',
+    excerpt: {
+      author: 'Wilfred Owen, British poet and frontline soldier',
+      sourceTitle: 'Dulce et Decorum Est (1917)',
+      text: '"Gas! GAS! Quick, boys!—An ecstasy of fumbling, / Fitting the clumsy helmets just in time... / If you could hear, at every jolt, the blood / Come gargling from the froth-corrupted lungs... / My friend, you would not tell with such high zest / To children ardent for some desperate glory, / The old Lie: Dulce et decorum est / Pro patria mori [It is sweet and fitting to die for one\'s country]."'
+    },
+    options: [
+      { id: 'a', text: 'The horrific reality of industrialized chemical slaughter exposes traditional romanticized rhetoric about glorious patriotic martyrdom as a cruel deception' },
+      { id: 'b', text: 'Poison gas technology was easily resisted and posed little psychological distress to frontline troops' },
+      { id: 'c', text: 'Soldiers found deep satisfaction and joy in trench combat on the Western Front' },
+      { id: 'd', text: 'Classical Roman proverbs provided comforting moral guidance to young soldiers during artillery bombardments' },
+    ],
+    correctOptionId: 'a',
+    hint: 'Owen directly brands the famous Latin proverb praising death for one\'s homeland as an "old Lie" after watching a comrade choke on chlorine gas.',
+    explanation: 'Wilfred Owen depicted the grotesque physical trauma of chlorine gas asphyxiation to shatter the Victorian myth of glorious warfare, branding the idea of noble patriotic death as an "old Lie."',
+    foundationalConcept: 'Source Analysis: Disillusionment & Trench Poetry'
+  },
 
-  // ==========================================
-  // UNIT 4: INTERWAR YEARS & WORLD WAR II
-  // ==========================================
+  // ==========================================================================
+  // UNIT 4: INTERWAR YEARS & WORLD WAR II (15 Questions)
+  // ==========================================================================
+
+  // --- Tier 1 (Recall & Core Vocabulary) ---
   {
     id: 'u4-t1-hyperinflation',
     unit: 'unit4',
@@ -711,16 +969,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 1,
     skill: 'vocabulary',
     readingDemand: 'low',
-    questionText: 'In Weimar Germany in 1923, printing massive amounts of paper money to pay reparations and striking workers caused "hyperinflation." What is hyperinflation?',
+    questionText: 'When the German Weimar government printed immense quantities of unbacked paper currency in 1923 to settle war debts, the economy suffered from "hyperinflation," which is:',
     options: [
-      { id: 'a', text: 'An extreme, rapid increase in prices where currency loses its value and becomes virtually worthless' },
-      { id: 'b', text: 'A government program that doubles everyone’s savings in gold coins' },
-      { id: 'c', text: 'A sudden drop in the price of food making everything cheap' },
-      { id: 'd', text: 'A law requiring all citizens to purchase imported foreign goods' },
+      { id: 'a', text: 'An out-of-control, astronomical rise in consumer prices where currency loses purchasing power and becomes nearly worthless' },
+      { id: 'b', text: 'A state policy that doubles all citizens\' household savings in physical gold reserves' },
+      { id: 'c', text: 'A sudden, dramatic reduction in grocery costs that makes consumer goods cheap' },
+      { id: 'd', text: 'A trade law mandating that all families buy only imported goods' },
     ],
     correctOptionId: 'a',
-    hint: 'Germans needed wheelbarrows full of paper marks just to buy a single loaf of bread.',
-    explanation: 'Hyperinflation is an astronomical, out-of-control surge in prices where money loses its purchasing power, wiping out life savings and destabilizing the middle class.',
+    hint: 'Ordinary citizens carried wheelbarrows of paper marks just to purchase basic staples like bread and eggs.',
+    explanation: 'Weimar hyperinflation in 1923 wiped out middle-class bank savings, destroyed faith in the democratic government, and left lasting economic trauma in Germany.',
     foundationalConcept: 'Weimar Hyperinflation (1923)'
   },
   {
@@ -730,16 +988,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 1,
     skill: 'recall',
     readingDemand: 'low',
-    questionText: 'During WWII, the Allied coalition known as the "Big Three" who coordinated wartime strategy at conferences consisted of the leaders of:',
+    questionText: 'During World War II, the supreme Allied leadership council known as the "Big Three" who planned wartime strategy at Tehran, Yalta, and Potsdam comprised the heads of:',
     options: [
       { id: 'a', text: 'The United States, Great Britain, and the Soviet Union' },
-      { id: 'b', text: 'Germany, Italy, and Japan' },
+      { id: 'b', text: 'Germany, Italy, and Imperial Japan' },
       { id: 'c', text: 'France, Spain, and Poland' },
-      { id: 'd', text: 'Canada, Australia, and India' },
+      { id: 'd', text: 'Canada, Australia, and New Zealand' },
     ],
     correctOptionId: 'a',
-    hint: 'Franklin D. Roosevelt, Winston Churchill, and Joseph Stalin led the three primary Allied military powers.',
-    explanation: 'The "Big Three" Allied powers were Franklin D. Roosevelt (USA), Winston Churchill (Great Britain), and Joseph Stalin (USSR), who met at Tehran, Yalta, and Potsdam to defeat the Axis powers.',
+    hint: 'Franklin D. Roosevelt, Winston Churchill, and Joseph Stalin led this powerful anti-Axis coalition.',
+    explanation: 'The Big Three (FDR, Churchill, and Stalin) represented the dominant Allied military powers that met at major summits to coordinate Axis defeat and plan post-war boundaries.',
     foundationalConcept: 'The "Big Three" Allied Leadership'
   },
   {
@@ -749,18 +1007,58 @@ export const QUESTION_BANK: Question[] = [
     tier: 1,
     skill: 'vocabulary',
     readingDemand: 'low',
-    questionText: 'What was the German military tactic of "Blitzkrieg" (lightning war) that overwhelmed Poland and France in 1939–1940?',
+    questionText: 'Which innovative military doctrine did Nazi Germany deploy in 1939–1940, combining concentrated armored tank thrusts with close tactical air support to breach enemy fronts?',
     options: [
-      { id: 'a', text: 'A rapid, coordinated surprise offensive using tanks, mechanized infantry, and air support to pierce enemy lines' },
-      { id: 'b', text: 'Digging permanent deep trench lines and waiting months for enemy troops to starve' },
-      { id: 'c', text: 'Using only naval battleships to bombard enemy coastal ports from afar' },
-      { id: 'd', text: 'Dropping leaflets demanding immediate surrender without firing weapons' },
+      { id: 'a', text: 'Blitzkrieg ("Lightning War")' },
+      { id: 'b', text: 'Protracted Trench Encampment' },
+      { id: 'c', text: 'Naval Gunboat Diplomacy' },
+      { id: 'd', text: 'Attrition Siege Warfare' },
     ],
     correctOptionId: 'a',
-    hint: 'It was designed to avoid the slow trench stalemates of WWI through intense speed and armored coordination.',
-    explanation: 'Blitzkrieg ("lightning war") emphasized rapid armored penetration supported by dive bombers (Luftwaffe) and mechanized infantry to encircle defending armies before they could organize.',
+    hint: 'The tactic relied on overwhelming speed, mechanized panzers, and Luftwaffe dive-bombers to disorient defending armies.',
+    explanation: 'Blitzkrieg ("lightning war") emphasized rapid armored penetration supported by close air support and mechanized infantry to encircle defending armies before they could organize a defensive line.',
     foundationalConcept: 'Blitzkrieg Warfare Doctrine'
   },
+  {
+    id: 'u4-t1-great-depression-dictators',
+    unit: 'unit4',
+    unitName: 'Unit 4: Interwar Years & WWII',
+    tier: 1,
+    skill: 'recall',
+    readingDemand: 'low',
+    questionText: 'Which catastrophic economic collapse that began in 1929 devastated international trade, spawned mass unemployment, and paved the way for totalitarian regimes in Germany and Japan?',
+    options: [
+      { id: 'a', text: 'The Great Depression' },
+      { id: 'b', text: 'The Panic of 1837' },
+      { id: 'c', text: 'The South Sea Bubble' },
+      { id: 'd', text: 'The Marshall Plan Rebound' },
+    ],
+    correctOptionId: 'a',
+    hint: 'Triggered by the October 1929 Wall Street stock crash, this crisis caused global bank closures and soaring joblessness.',
+    explanation: 'The Great Depression crippled worldwide economies. In Germany, six million unemployed citizens lost faith in the Weimar Republic, facilitating Adolf Hitler\'s rise to power.',
+    foundationalConcept: 'The Great Depression & Fascist Rise'
+  },
+  {
+    id: 'u4-t1-dday-normandy',
+    unit: 'unit4',
+    unitName: 'Unit 4: Interwar Years & WWII',
+    tier: 1,
+    skill: 'recall',
+    readingDemand: 'low',
+    questionText: 'On June 6, 1944 (D-Day), Allied amphibious and airborne forces executed Operation Overlord, landing on the fortified beaches of Normandy to:',
+    options: [
+      { id: 'a', text: 'Liberate Western Europe from Nazi occupation and open a decisive second front in Europe' },
+      { id: 'b', text: 'Evacuate stranded British infantry back to the English coastline' },
+      { id: 'c', text: 'Sign an immediate conditional truce with German generals in Berlin' },
+      { id: 'd', text: 'Capture the Japanese home islands through a northern Arctic route' },
+    ],
+    correctOptionId: 'a',
+    hint: 'General Eisenhower directed American, British, and Canadian forces storming northern French shores to break Hitler\'s "Atlantic Wall."',
+    explanation: 'Operation Overlord (D-Day) opened the long-awaited Western Front, establishing an Allied beachhead in France that led to the liberation of Paris and the eventual collapse of Nazi Germany.',
+    foundationalConcept: 'Turning Point: D-Day & Normandy'
+  },
+
+  // --- Tier 2 (Conceptual & Cause/Effect) ---
   {
     id: 'u4-t2-appeasement-chamberlain',
     unit: 'unit4',
@@ -768,16 +1066,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'cause_effect',
     readingDemand: 'medium',
-    questionText: 'Prior to WWII, British Prime Minister Neville Chamberlain followed a diplomatic policy of "appeasement" toward Adolf Hitler. What was the goal of appeasement?',
+    questionText: 'Prior to the outbreak of WWII, British Prime Minister Neville Chamberlain pursued a foreign policy of "appeasement" toward Nazi Germany. What was the underlying goal of appeasement?',
     options: [
-      { id: 'a', text: 'Giving in to some of Hitler\'s aggressive territorial demands (like the Sudetenland) in hopes of avoiding another catastrophic European war' },
-      { id: 'b', text: 'Launching a preemptive surprise military strike against Berlin' },
-      { id: 'c', text: 'Forcing Germany to convert into a communist republic' },
-      { id: 'd', text: 'Banning all British businesses from trading with European nations' },
+      { id: 'a', text: 'Yielding to certain territorial grievances (such as the Sudetenland) to avert another devastating general European war' },
+      { id: 'b', text: 'Executing an immediate surprise aerial bombing raid against military centers in Berlin' },
+      { id: 'c', text: 'Pressuring Germany to adopt a Soviet-style communist economic system' },
+      { id: 'd', text: 'Prohibiting all British businesses from participating in global merchant shipping' },
     ],
     correctOptionId: 'a',
-    hint: 'Traumatized by the horrors of WWI, British and French leaders wanted peace at almost any cost.',
-    explanation: 'Appeasement was the diplomatic strategy of yielding to aggressive concessions to maintain peace. The Munich Agreement of 1938 allowed Hitler to take the Sudetenland, which only encouraged further Nazi expansion.',
+    hint: 'Scarred by the slaughter of WWI, British and French leaders hoped satisfying Hitler\'s stated demands would preserve European peace.',
+    explanation: 'Appeasement sought to maintain peace by granting concessions to an aggressor. At Munich in 1938, Britain and France yielded the Sudetenland to Hitler, which emboldened further Nazi conquest.',
     foundationalConcept: 'Policy of Appeasement & Munich'
   },
   {
@@ -787,16 +1085,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'cause_effect',
     readingDemand: 'medium',
-    questionText: 'Why do military historians consider the brutal Battle of Stalingrad (1942–1943) the decisive turning point of WWII in Europe?',
+    questionText: 'Why do military historians evaluate the catastrophic German defeat at the Battle of Stalingrad (1942–1943) as the decisive turning point of WWII in Europe?',
     options: [
-      { id: 'a', text: 'The Soviet Red Army encircled and destroyed an entire German army, permanently halting Germany\'s advance and putting Hitler on the defensive' },
-      { id: 'b', text: 'It forced the United States to withdraw all troops from the European continent' },
-      { id: 'c', text: 'It was the first naval aircraft carrier battle fought in the Arctic Ocean' },
-      { id: 'd', text: 'The battle ended the war immediately with an armistice treaty' },
+      { id: 'a', text: 'The Soviet Red Army encircled and eliminated an entire German field army, breaking the Nazi offensive drive and forcing Germany onto the strategic defensive' },
+      { id: 'b', text: 'It forced the United States to withdraw all naval forces from the European theater' },
+      { id: 'c', text: 'It marked the first carrier-based naval dogfight fought in the Baltic Sea' },
+      { id: 'd', text: 'The conflict concluded the war immediately through an armistice signed in Moscow' },
     ],
     correctOptionId: 'a',
-    hint: 'The German 6th Army was completely cut off and defeated in the frozen ruins of this Russian industrial city on the Volga River.',
-    explanation: 'The catastrophic defeat at Stalingrad cost the Axis over 800,000 casualties and shattered the myth of Nazi invincibility, turning the tide on the Eastern Front as the Soviets began driving toward Berlin.',
+    hint: 'The German 6th Army was trapped and forced to surrender in the freezing ruins of this industrial city on the Volga River.',
+    explanation: 'Stalingrad shattered the myth of Nazi invincibility, resulting in massive Axis casualties. From this point forward, the Soviet Union seized the initiative, driving German forces back toward Berlin.',
     foundationalConcept: 'Turning Point: Battle of Stalingrad'
   },
   {
@@ -806,16 +1104,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'map_spatial',
     readingDemand: 'medium',
-    questionText: 'What was the primary objective of the American military strategy of "Island Hopping" in the Pacific Theater against Japan?',
+    questionText: 'What strategic operational principle guided the United States military\'s "Island Hopping" campaign across the Pacific Theater against Japan?',
     options: [
-      { id: 'a', text: 'Capturing strategically vital Japanese-held islands while bypassing heavily fortified ones to establish air bases within bombing range of Japan' },
-      { id: 'b', text: 'Building luxury vacation resorts across tropical islands for wounded Allied soldiers' },
-      { id: 'c', text: 'Evacuating all civilian islanders to Australia to avoid combat zones' },
-      { id: 'd', text: 'Attacking every single tiny atoll in numerical order from south to north' },
+      { id: 'a', text: 'Capturing strategically vital atolls while bypassing heavily fortified Japanese outposts to construct airfields within bombing radius of Tokyo' },
+      { id: 'b', text: 'Establishing civilian beach tourist resorts across captured tropical archipelagos' },
+      { id: 'c', text: 'Evacuating all indigenous Pacific island populations directly to military camps in Australia' },
+      { id: 'd', text: 'Assaulting every single fortified enemy-held atoll in strictly numerical sequential order' },
     ],
     correctOptionId: 'a',
-    hint: 'The US military leaped over strongly defended Japanese bases, cutting off their supply lines, while advancing step-by-step toward the Japanese home islands.',
-    explanation: 'Led by Admiral Nimitz and General MacArthur, "island hopping" selectively seized key islands (Guadalcanal, Tarawa, Iwo Jima, Okinawa) for airstrips while cutting off bypassed Japanese garrisons.',
+    hint: 'Allied forces "leaped" over heavily defended enemy bastions, cutting their maritime supply lines while securing air bases.',
+    explanation: 'Under Admiral Nimitz and General MacArthur, "island hopping" bypassed strongholds (leaving them isolated to wither) while seizing key airfields to bring American bombers within range of Japan.',
     foundationalConcept: 'Pacific Strategy: Island Hopping'
   },
   {
@@ -825,16 +1123,16 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'vocabulary',
     readingDemand: 'medium',
-    questionText: 'Passed by the Nazi regime in 1935, what was the primary legal impact of the infamous Nuremberg Laws?',
+    questionText: 'Enacted by the Nazi regime in 1935, what was the primary legal consequence of the antisemitic Nuremberg Laws?',
     options: [
-      { id: 'a', text: 'They stripped German Jews of their citizenship, civil rights, and banned marriage between Jews and non-Jewish Germans' },
-      { id: 'b', text: 'They declared war against Great Britain and France' },
-      { id: 'c', text: 'They outlawed all industrial factories and labor unions in Berlin' },
-      { id: 'd', text: 'They established free public universities for all minority residents' },
+      { id: 'a', text: 'They stripped German Jews of their national citizenship, voting rights, and banned intermarriage between Jews and non-Jewish Germans' },
+      { id: 'b', text: 'They issued formal declarations of war against Great Britain and France' },
+      { id: 'c', text: 'They prohibited all private manufacturing corporations in the city of Munich' },
+      { id: 'd', text: 'They established free tuition and equal admission across all German universities' },
     ],
     correctOptionId: 'a',
-    hint: 'These laws institutionalized racial discrimination into official German state statute, beginning the legal exclusion of Jews.',
-    explanation: 'The Nuremberg Laws institutionalized Nazi racial theory, stripping Jews of German citizenship, voting rights, and legal protections, laying the groundwork for state-sponsored persecution and the Holocaust.',
+    hint: 'These statutes institutionalized Nazi racial ideology into official German national law, legally isolating Jews from society.',
+    explanation: 'The 1935 Nuremberg Laws institutionalized antisemitic racial theory, depriving German Jews of citizenship, civil protections, and marital rights, establishing the legal precursor to the Holocaust.',
     foundationalConcept: 'Nuremberg Laws & Nazi Racial Policy'
   },
   {
@@ -844,18 +1142,58 @@ export const QUESTION_BANK: Question[] = [
     tier: 2,
     skill: 'cause_effect',
     readingDemand: 'medium',
-    questionText: 'What was the primary rationale presented by President Harry S. Truman for authorizing the deployment of atomic bombs against Hiroshima and Nagasaki in August 1945?',
+    questionText: 'What was the primary military rationale presented by President Harry S. Truman for authorizing the atomic bombings of Hiroshima and Nagasaki in August 1945?',
     options: [
-      { id: 'a', text: 'To force an immediate unconditional Japanese surrender and prevent a bloody amphibious invasion estimated to cost hundreds of thousands of Allied lives' },
-      { id: 'b', text: 'To test whether nuclear weapons could be used to generate commercial electricity' },
-      { id: 'c', text: 'To comply with an order issued directly by the League of Nations' },
-      { id: 'd', text: 'To convince Great Britain to join the Allied war effort in the Pacific' },
+      { id: 'a', text: 'To force an immediate unconditional Japanese surrender and prevent a costly amphibious invasion projected to cause massive casualties' },
+      { id: 'b', text: 'To evaluate whether nuclear fission could be repurposed for civilian commercial power grids' },
+      { id: 'c', text: 'To comply with a mandatory operational directive issued by the League of Nations' },
+      { id: 'd', text: 'To persuade Great Britain to dispatch naval troops to the Asian mainland' },
     ],
     correctOptionId: 'a',
-    hint: 'Military planners estimated that a full amphibious land invasion of the Japanese home islands would result in enormous American and Japanese casualties.',
-    explanation: 'President Truman justified using atomic weapons as the fastest way to end the war without a costly land invasion (Operation Downfall), which military leaders projected would result in massive casualties.',
+    hint: 'Planners projected that Operation Downfall (a land invasion of Japan) would cost hundreds of thousands of Allied lives.',
+    explanation: 'Truman justified the use of atomic weapons on Hiroshima and Nagasaki as necessary to compel swift Japanese surrender and avert Operation Downfall, an invasion projected to cause immense casualties.',
     foundationalConcept: 'The Atomic Bomb Decision'
   },
+  {
+    id: 'u4-t2-molotov-ribbentrop-pact',
+    unit: 'unit4',
+    unitName: 'Unit 4: Interwar Years & WWII',
+    tier: 2,
+    skill: 'cause_effect',
+    readingDemand: 'medium',
+    questionText: 'In August 1939, ideological rivals Nazi Germany and the Soviet Union surprised the international community by signing a Non-Aggression Pact. What secret protocol did it include?',
+    options: [
+      { id: 'a', text: 'A classified agreement to partition Poland, the Baltic States, and Eastern Europe into German and Soviet spheres of influence' },
+      { id: 'b', text: 'A formal treaty merging the German Wehrmacht with the Soviet Red Army under joint command' },
+      { id: 'c', text: 'A commitment by Joseph Stalin to cede Moscow to German naval supervision' },
+      { id: 'd', text: 'A mutual pledge to dismantle all tanks, air fleets, and armaments factories immediately' },
+    ],
+    correctOptionId: 'a',
+    hint: 'The pact prevented a two-front war for Hitler when invading Poland, while allowing Stalin to annex eastern borderlands.',
+    explanation: 'The German-Soviet Non-Aggression Pact freed Hitler to invade western Poland on September 1, 1939, while secretly allocating eastern Poland and the Baltic States to the USSR.',
+    foundationalConcept: 'The Nazi-Soviet Non-Aggression Pact'
+  },
+  {
+    id: 'u4-t2-fascism-vs-communism',
+    unit: 'unit4',
+    unitName: 'Unit 4: Interwar Years & WWII',
+    tier: 2,
+    skill: 'cause_effect',
+    readingDemand: 'medium',
+    questionText: 'While both totalitarian dictatorships under Adolf Hitler (Fascism) and Joseph Stalin (Soviet Communism) eliminated civil liberties, how did their core ideologies fundamentally diverge?',
+    options: [
+      { id: 'a', text: 'Fascism promoted fervent ultra-nationalism, racial hierarchy, and private corporate property, whereas Communism championed international proletarian revolution and state ownership of all production' },
+      { id: 'b', text: 'Fascism advocated absolute pacifism, while Communism preached perpetual military global conquest' },
+      { id: 'c', text: 'Soviet Communism guaranteed free press and open multiparty ballots, while Fascism banned all elections' },
+      { id: 'd', text: 'Fascism was organized exclusively by peasant cooperatives, while Communism was founded by aristocratic financiers' },
+    ],
+    correctOptionId: 'a',
+    hint: 'Fascists protected private industrial cartels subordinated to state national glory; communists eradicated private property in pursuit of a classless collective state.',
+    explanation: 'Fascism was hyper-nationalistic, anti-communist, and structured around racial hierarchy and state-controlled private capitalism. Soviet Communism was theoretically internationalist, aiming to eliminate social class and private ownership.',
+    foundationalConcept: 'Ideology: Fascism vs. Communism'
+  },
+
+  // --- Tier 3 (Analytical & Primary Source Analysis) ---
   {
     id: 'u4-t3-appeasement-cartoon',
     unit: 'unit4',
@@ -876,16 +1214,16 @@ export const QUESTION_BANK: Question[] = [
         'Each back represents a broken treaty or seized territory: "Rhineland Re-occupation", "Danzig", "Rearmament", and "Munich".'
       ]
     },
-    questionText: 'What point of view does British cartoonist David Low express regarding European democratic leaders’ handling of Adolf Hitler?',
+    questionText: 'Analyze British cartoonist David Low’s visual metaphor in this 1938 drawing. What central critique does he express regarding Western diplomatic policy toward Hitler?',
     options: [
-      { id: 'a', text: 'Democratic leaders were cowardly and their appeasement of Hitler only enabled him to march toward greater conquest' },
-      { id: 'b', text: 'Democratic leaders had completely outsmarted Hitler and defeated his ambitions' },
-      { id: 'c', text: 'Hitler was an honorable diplomatic partner who respected European borders' },
-      { id: 'd', text: 'The League of Nations had successfully disarmed the German military' },
+      { id: 'a', text: 'Concessions and appeasement by democratic leaders only empowered Hitler to march aggressively toward broader conquest across Europe' },
+      { id: 'b', text: 'Western democracies had completely outwitted Hitler and secured lasting continental peace' },
+      { id: 'c', text: 'Hitler was an honest diplomatic partner dedicated to upholding international border treaties' },
+      { id: 'd', text: 'The League of Nations had successfully disarmed and dismantled the German armed forces' },
     ],
     correctOptionId: 'a',
-    hint: 'Notice the label "Spineless Leaders of Democracy" and Hitler literally walking over their backs to reach glory.',
-    explanation: 'Low sharply criticized the British and French policy of appeasement, arguing that spineless concessions rewarded aggression and allowed Hitler to walk all over international treaties.',
+    hint: 'Notice the caption labeling democratic leaders as "Stepping Stones to Glory" for Hitler\'s marching boots.',
+    explanation: 'David Low sharply attacked British and French appeasement, illustrating that spineless concessions over the Rhineland, rearmament, and Munich enabled Hitler to advance toward total domination.',
     foundationalConcept: 'Visual Analysis: Critique of Appeasement'
   },
   {
@@ -895,21 +1233,21 @@ export const QUESTION_BANK: Question[] = [
     tier: 3,
     skill: 'source_analysis',
     readingDemand: 'high',
-    questionText: 'Read the eyewitness testimony below from Holocaust survivor Nelly Casana. What specific stage of Nazi persecution is she describing?',
+    questionText: 'Read the eyewitness oral testimony below from Holocaust survivor Nelly Casana. Which specific phase of Nazi persecution is she recounting?',
     excerpt: {
       author: 'Nelly Casana, Holocaust Survivor',
       sourceTitle: 'Oral History Archive',
       text: '"I remember the fear, of never feeling safe. You had to hide constantly. And the hunger — I would sit in our apartment and look out the window, and I would see the Polish children across the street bringing milk back home. It was like watching people in a storybook — we had no food, no milk. German soldiers were everywhere. All the Jews had to live behind high walls and barbed wire."'
     },
     options: [
-      { id: 'a', text: 'Forced confinement, isolation, and starvation inside an enclosed Jewish ghetto (such as the Warsaw Ghetto)' },
-      { id: 'b', text: 'The initial emigration of German citizens across the Atlantic ocean' },
-      { id: 'c', text: 'The liberation of European cities by Allied soldiers at the end of the war' },
-      { id: 'd', text: 'The fair distribution of government food rations during wartime' },
+      { id: 'a', text: 'Forced confinement, segregation, and calculated starvation inside a sealed urban Jewish ghetto' },
+      { id: 'b', text: 'The voluntary overseas migration of German civilians to North America' },
+      { id: 'c', text: 'The joyful liberation of European cities by Allied ground armies at war\'s end' },
+      { id: 'd', text: 'The equal municipal distribution of wartime grocery rations under municipal guidelines' },
     ],
     correctOptionId: 'a',
-    hint: 'She describes being enclosed "behind high walls and barbed wire," with severe food shortages while soldiers watched outside.',
-    explanation: 'Nelly Casana describes life in a sealed Jewish ghetto (specifically Warsaw), where the Nazis crammed hundreds of thousands of Jews behind brick walls and barbed wire under conditions of engineered starvation and terror.',
+    hint: 'She describes being forced "behind high walls and barbed wire" while suffering severe engineered starvation under armed guard.',
+    explanation: 'Nelly Casana describes life in a sealed Jewish ghetto (such as the Warsaw Ghetto), where the Nazi regime imprisoned Jewish populations in enclosed, unsanitary, and starving districts prior to mass deportation to death camps.',
     foundationalConcept: 'Holocaust: Ghettoization & Segregation'
   },
   {
@@ -919,21 +1257,21 @@ export const QUESTION_BANK: Question[] = [
     tier: 3,
     skill: 'source_analysis',
     readingDemand: 'high',
-    questionText: 'Read the speech excerpt below from Winston Churchill in 1946. What does his metaphor of the "Iron Curtain" describe about postwar Europe?',
+    questionText: 'Examine this excerpt from Winston Churchill’s 1946 address in Fulton, Missouri. What geopolitical reality does his metaphor of the "Iron Curtain" characterize?',
     excerpt: {
-      author: 'Winston Churchill',
-      date: 'March 1946 Sinews of Peace Speech, Fulton, Missouri',
+      author: 'Winston Churchill, former British Prime Minister',
+      date: 'March 1946 "Sinews of Peace" Address, Westminster College',
       text: '"From Stettin in the Baltic to Trieste in the Adriatic, an iron curtain has descended across the Continent. Behind that line lie all the capitals of the ancient states of Central and Eastern Europe... Police governments are prevailing in nearly every case, and so far, except in Czechoslovakia, there is no true democracy."'
     },
     options: [
-      { id: 'a', text: 'The ideological and political division separating Soviet-controlled communist Eastern Europe from democratic Western Europe' },
-      { id: 'b', text: 'A giant steel wall built by France to prevent future German trade' },
-      { id: 'c', text: 'A new network of transcontinental railroads connecting all European capitals' },
-      { id: 'd', text: 'A United Nations environmental treaty to clean industrial smog' },
+      { id: 'a', text: 'The rigid geopolitical and ideological boundary dividing Soviet-dominated communist satellite states from democratic Western Europe' },
+      { id: 'b', text: 'A literal physical steel wall constructed by France to block industrial coal trade with Germany' },
+      { id: 'c', text: 'A transcontinental high-speed passenger rail system connecting all European capitals' },
+      { id: 'd', text: 'A collaborative environmental treaty enacted to mitigate industrial coal pollution' },
     ],
     correctOptionId: 'a',
-    hint: 'Churchill is describing the division between free democracies and Soviet-controlled satellite police states at the start of the Cold War.',
-    explanation: 'Churchill\'s famous "Iron Curtain" speech signaled the start of the Cold War, describing how the Soviet Union had sealed off Eastern Europe behind puppet totalitarian communist regimes.',
+    hint: 'Churchill warns of the emerging Cold War divide between free democratic societies and repressive Soviet-controlled police states.',
+    explanation: 'Churchill\'s famous "Iron Curtain" speech announced the onset of the Cold War, describing how the Soviet Union had sealed off Eastern Europe behind authoritarian communist client regimes.',
     foundationalConcept: 'Postwar Consequences: The Iron Curtain'
   }
 ];
